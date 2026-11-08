@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import type { AppState, Preferences } from "@/lib/types";
+import { official2025Questions } from "@/lib/content";
+import { USCIS_2025_URL, USCIS_UPDATES_URL } from "@/lib/uscis-2025-source";
 
 export function Settings({
   state,
@@ -27,10 +29,8 @@ export function Settings({
         Cài đặt bài học
       </h1>
       <p>
-        Bộ từ vựng hiện có 152 từ và 87 câu hỏi tiếng Anh thuộc phiên bản 2025.
-        Bộ câu hỏi gia đình có thêm 100 câu kèm đáp án, chưa ghi phiên bản đề.
-        Ứng dụng chỉ ghép đáp án khi nội dung câu hỏi khớp; giữ riêng nguồn và
-        số câu của từng bộ.
+        Bộ từ vựng có 152 từ. Bộ đề USCIS 2025 có đủ 128 câu hỏi:
+        120 câu có đáp án cố định và 8 câu cần thông tin hiện tại hoặc nơi ở.
       </p>
       <form
         onSubmit={(event) => {
@@ -108,18 +108,29 @@ export function Settings({
         <div className="notice">
           <strong>Dữ liệu nguồn · USCIS 2025</strong>
           <p>
-            Giữ nguyên từ, nghĩa tiếng Việt, cách đọc và câu hỏi từ bộ dữ liệu
-            đã cung cấp (M-1778, 09/25). Bản thu chỉ được ghép khi khớp đúng nội
-            dung câu hỏi. Đáp án gia đình được giữ nguyên từ civics.json và ghi
-            rõ nguồn; các câu hỏi không khớp vẫn cần đối chiếu tài liệu USCIS.
+            Câu hỏi và các đáp án tiếng Anh lấy từ USCIS M-1778 (09/25).
+            Bản dịch tiếng Việt là phần hỗ trợ học tập đã có trong ứng dụng.
+            Bộ 100 câu gia đình được giữ riêng, không dùng làm đáp án cho bộ 2025.
           </p>
           <a
-            href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"
+            href={USCIS_2025_URL}
             target="_blank"
             rel="noreferrer"
           >
             Tài liệu học chính thức từ USCIS ↗
           </a>
+          <p>
+            Các câu dưới đây chưa được đưa vào lượt luyện câu hỏi. Hãy nhờ người nhà
+            xác minh thông tin đúng với nơi ở và ngày phỏng vấn; ứng dụng không lưu sẵn tên người đương nhiệm.
+          </p>
+          <ul className="dynamic-question-list">
+            {official2025Questions.filter(q => q.dynamic).map(q => (
+              <li key={q.id}>
+                <strong>Câu {q.number}</strong>: <span lang="en">{q.question}</span>
+              </li>
+            ))}
+          </ul>
+          <a href={USCIS_UPDATES_URL} target="_blank" rel="noreferrer">Kiểm tra đáp án hiện tại tại USCIS ↗</a>
         </div>
         <button className="primary" type="submit">
           Lưu cài đặt

@@ -1,5 +1,31 @@
 # Source data validation
 
+## Current official USCIS 2025 bank
+
+The authoritative [USCIS M-1778 PDF](https://www.uscis.gov/sites/default/files/document/questions-and-answers/2025-Civics-Test-128-Questions-and-Answers.pdf) was downloaded directly and retained under `src/content/sources/uscis-2025.pdf` (19 pages; SHA-256 `f280608c0fb6dc1eba344b4746a7ba52d02fe411fba30cedd4371819f0abe11c`). Its pinned UTF-8 text extraction has canonical-LF SHA-256 `07fa5d35a16e8f316838a5e2589f5fbeaf3f30fd2c06d2ea0750206302735ab0`. The reproducible import creates `src/content/civics-2025.json` with all 128 versioned official IDs, English questions, accepted answer bullets, existing question translations, page numbers, 65/20 markers, and explicitly reviewed response counts.
+
+Coverage: **128/128 valid records; 120 static answer sets; 8 dynamic requirements; zero missing static answers, lost source bullets, duplicate IDs, or invalid vocabulary mappings**. Dynamic questions are 23, 29, 30, 38, 39, 57, 61, and 62. Their USCIS instructions remain intact; no current names or state-specific answers are invented. They are excluded from newly created question-practice queues and listed in family settings. All 87 distinct vocabulary example references resolve by official number/version: 149 examples have static answers and 3 require dynamic information. The complete bank also retains the 41 questions not referenced by the existing vocabulary-led lessons.
+
+Root cause of the previous 62 unmatched questions: the vocabulary adapter imported only the partial 2025 question examples with no answers; content enrichment attempted text joins against an unversioned 100-question source. That is not a complete 2025 answer source. `attachOfficial2025()` now uses `uscis-2025-NNN`, version, and official number; it never joins family or 2008 answers into 2025. Original files under `src/data`, word IDs, meanings, existing Vietnamese question translations, storage schema, review history, and repetition intervals remain unchanged. Runtime/build validation and source-parity tests prevent answer loss. Settings retain official attribution; study cards contain no source disclosure or links.
+
+All 103 tests, lint, type checking, data validation, reproducible import check, and production build pass. Browser verification at 320px confirms Q1/Q17/Q21 answers, collapsed alternatives, automatic Vietnamese question translation after reveal, 62px Continue controls, no horizontal overflow, and unchanged progress/history after question practice. No Vietnamese answer translations have been fabricated; current English official answers are usable without them. The original 100-question family source remains separately validated and intact, not relabeled as a verified 2008 bank.
+
+The sections below record earlier implementation stages. Statements about 62 unmatched questions or family-answer attachment describe the previous architecture and are superseded by the official 2025 bank above.
+
+Files added for this update:
+
+- `src/content/civics-2025.json`, `src/content/sources/uscis-2025.pdf`, and `src/content/sources/uscis-2025.txt`: complete generated bank and pinned original source snapshots.
+- `src/lib/uscis-2025-source.ts` and `src/lib/uscis-2025.ts`: source parsing, explicit dynamic/multi-response annotations, stable-ID mapping, eligibility, and validation.
+- `scripts/extract-uscis-2025.py`, `scripts/import-uscis-2025.ts`, and `tests/uscis-2025.test.ts`: reproducible extraction/import and official-bank regressions.
+
+Files updated:
+
+- `src/lib/content.ts`, `src/lib/types.ts`, and `src/lib/engine.ts`: load official data and omit unusable questions from newly planned practice; vocabulary scheduling is unchanged.
+- `src/components/civics-question-card.tsx`, `src/components/family-settings.tsx`, and `src/app/globals.css`: concise answer cards, accepted alternatives, and attribution outside lessons.
+- `scripts/validate-data.ts`, `package.json`, and `.gitignore`: complete validation before build, import command, and temporary-tool exclusions.
+- `tests/civics-answers.test.ts`, `tests/content.test.ts`, and `tests/recordings.test.ts`: retain separate legacy coverage and update official-answer/audio expectations.
+- `README.md`, `TODO.md`, and this report: reproduction steps, results, limitations, and implementation record.
+
 ## Complete pronunciation template and worksheet
 
 The approved-reading JSON now has exactly 152 stable-ID keys in source learning order: 3 preserved nonempty readings and 149 empty placeholders. Empty strings are treated as absent UI hints. `pronunciation-worksheet.csv` has the same 152 ordered rows, actual English/Vietnamese meanings, existing readings, and final sounds copied from the separate ending file. Its UTF-8 BOM, quoting, and CRLF rows support Vietnamese spreadsheet editing. The importer updates only readings by ID; it rejects unknown/repeated IDs and conflicting approvals unless explicitly overridden, with no writes on rejection. Final-sound metadata and learning progress are untouched.

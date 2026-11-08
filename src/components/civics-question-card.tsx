@@ -1,5 +1,6 @@
 import type { RefObject } from "react";
 import type { StudyItem } from "@/lib/types";
+import { hasUsableCivicsAnswer } from "@/lib/uscis-2025";
 
 function AudioButton({
   text,
@@ -47,13 +48,17 @@ export function CivicsQuestionCard({
     : item.answer?.trim()
       ? [item.answer]
       : [];
+  const usable = hasUsableCivicsAnswer(item);
+  const count = item.requiredAnswers ?? 1;
+  const recommended = answers.slice(0, count);
+  const alternatives = answers.slice(count);
   return (
     <section className="study-card practice-card">
       <h1 ref={heading} tabIndex={-1} lang="en">
         {item.question}
       </h1>
       {item.questionVietnamese && (
-        mode === "learning" ? (
+        mode === "learning" || revealed ? (
           <p className="question-translation" lang="vi">{item.questionVietnamese}</p>
         ) : (
           <details className="question-translation-toggle">
@@ -70,36 +75,39 @@ export function CivicsQuestionCard({
       />
       {revealed ? (
         <div className="answer-area" aria-live="polite">
-          <p className="eyebrow">CÂU TRẢ LỜI</p>
-          {answers.length ? (
+          {usable ? (
             <>
-              {answers.map((answer, index) => (
+              <p className="answer-label">ĐÁP ÁN</p>
+              {recommended.map((answer, index) => (
                 <h2 lang="en" key={index}>
                   {answer}
                 </h2>
               ))}
-              <AudioButton
-                text={answers.join(" ")}
-                recording={item.answerAudio}
-                label="Nghe câu trả lời"
-                onPlay={onPlay}
-              />
-              {item.answersVietnamese?.map((translation, index) => (
-                <p className="answer-translation" key={index}>
+              {item.answersVietnamese?.slice(0, count).map((translation, index) => (
+                <p className="answer-translation" lang="vi" key={index}>
                   {translation}
                 </p>
               ))}
+              {alternatives.length > 0 && (
+                <details className="accepted-answers">
+                  <summary>Các đáp án khác</summary>
+                  <ul lang="en">
+                    {alternatives.map((answer, index) => (
+                      <li key={index}>{answer}{item.answersVietnamese?.[index + count] && (
+                        <p lang="vi">{item.answersVietnamese[index + count]}</p>
+                      )}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
             </>
           ) : (
             <p className="field-help">
-              {item.answerStatus === "unmatched"
-                ? "Chưa tìm thấy câu hỏi này trong bộ câu hỏi có đáp án được cung cấp."
-                : "Nguồn dữ liệu chưa có câu trả lời tiếng Anh cho câu hỏi này."}{" "}
-              Bạn có thể xem tài liệu USCIS.
+              {item.dynamicAnswer ? "Câu này cần đáp án theo nơi ở hoặc người đương nhiệm." : "Chưa có đáp án cho câu này."}
             </p>
           )}
           <button type="button" className="primary" onClick={onContinue}>
-            Đã luyện tập, tiếp tục <span aria-hidden="true">→</span>
+            {usable ? "Tiếp tục" : "Bỏ qua"} <span aria-hidden="true">→</span>
           </button>
         </div>
       ) : (
@@ -107,22 +115,6 @@ export function CivicsQuestionCard({
           Hiện đáp án
         </button>
       )}
-      <details className="question-source">
-        <summary>Thông tin nguồn</summary>
-        <div className="question-source-content">
-          <p>USCIS {item.sourceVersion}{item.questionId != null && ` · Câu ${item.questionId}`}</p>
-          {item.sourceRevision && <p>{item.sourceRevision}</p>}
-          {item.answerSourceId && (
-            <p>
-              Đáp án từ bộ dữ liệu gia đình · {item.answerSourceId}
-              {item.answerSourceVersion === "unspecified"
-                ? " · Nguồn chưa ghi phiên bản đề"
-                : item.answerSourceVersion ? ` · Bộ ${item.answerSourceVersion}` : ""}
-            </p>
-          )}
-          <a href={item.source} target="_blank" rel="noreferrer">Xem tài liệu USCIS ↗</a>
-        </div>
-      </details>
     </section>
   );
 }

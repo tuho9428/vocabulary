@@ -51,13 +51,10 @@ test("different numbering cannot attach a recording to the wrong 2025 question",
     allItems.find((item) => item.questionId === 1)!.questionAudio,
     undefined,
   );
-  assert.equal(supreme.answer, "The Constitution.");
-  assert.equal(
-    supreme.answerAudio,
-    existsSync(new URL("../public/audio/civics/en/A1en.mp3", import.meta.url))
-      ? "/audio/civics/en/A1en.mp3"
-      : undefined,
-  );
+  assert.equal(supreme.answer, "(U.S.) Constitution");
+  // The existing recording says "The Constitution."; do not substitute it for
+  // differently worded official 2025 answer text.
+  assert.equal(supreme.answerAudio, undefined);
 });
 test("answer recordings require matching both the question and approved answer text", () => {
   const question = "What is the supreme law of the land?";

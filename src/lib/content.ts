@@ -12,11 +12,15 @@ import finalSounds from "../content/final-sounds.json" with { type: "json" };
 import civicsSource from "../data/civics.json" with { type: "json" };
 import {
   adaptCivics,
-  attachCivicsAnswers,
   validateCivicsAnswers,
   answerValidationFailed,
 } from "./civics-adapter.ts";
 import { findQuestionRecording, type AudioManifest } from "./recordings.ts";
+import official2025Source from "../content/civics-2025.json" with { type: "json" };
+import type { Official2025Question } from "./uscis-2025-source.ts";
+import { attachOfficial2025, validateOfficial2025 } from "./uscis-2025.ts";
+
+export const official2025Questions = official2025Source.questions as Official2025Question[];
 
 // Local source modules are bundled by Next.js. No filesystem or Windows path at runtime.
 const adapted = adaptVocabulary(
@@ -46,7 +50,7 @@ const reviewedEndings: Record<
   { finalSound: string; headword: string; source: string }
 > = finalSounds;
 export const allItems = adapted.items.map((original) => {
-  const item = attachCivicsAnswers(original, civicsQuestions);
+  const item = attachOfficial2025(original, official2025Questions);
   return {
     ...item,
     pronunciationVi:
@@ -56,7 +60,7 @@ export const allItems = adapted.items.map((original) => {
     ...findQuestionRecording(
       recordings,
       item.question,
-      item.answers?.join(" ") ?? item.answer,
+      item.answers?.slice(0, item.requiredAnswers ?? 1).join(" ") ?? item.answer,
     ),
   };
 });
@@ -66,6 +70,9 @@ export const contentReport = {
     .filter((item) => !item.answers?.length)
     .map((item) => item.id),
 };
+// Fail the build rather than shipping static questions without usable answers.
+const officialReport = validateOfficial2025(official2025Questions, official2025Questions, allItems);
+if (!officialReport.valid) throw new Error("Invalid USCIS 2025 bank: " + JSON.stringify(officialReport));
 export function getBank(version: TestVersion) {
   // No 2008 source was supplied. Never relabel 2025 questions as 2008.
   return allItems.filter((item) => item.sourceVersion === version);

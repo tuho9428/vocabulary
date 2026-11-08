@@ -20,7 +20,9 @@ export type StudyItem = {
   answersVietnamese?: string[];
   answerSourceId?: string;
   answerSourceVersion?: TestVersion | "unspecified";
-  answerStatus?: "available" | "missing" | "unmatched";
+  answerStatus?: "available" | "missing" | "unmatched" | "dynamic";
+  requiredAnswers?: number;
+  dynamicAnswer?: { kind: "state-officeholder" | "current-officeholder" | "state-capital"; reference: string };
   explanation?: string;
   source: string;
   sourceVersion: TestVersion;

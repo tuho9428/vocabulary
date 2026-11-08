@@ -96,8 +96,7 @@
 .practice-card > .primary { margin-top: 16px; }
 .practice-card .answer-area { margin-top: 16px; padding-top: 16px; }
 .question-translation-toggle { margin-bottom: 12px; }
-.question-translation-toggle > summary,
-.question-source > summary {
+.question-translation-toggle > summary {
   min-height: 56px;
   padding: 14px 12px;
   cursor: pointer;
@@ -108,13 +107,16 @@
 }
 .question-translation-toggle > summary { background: #f0f3eb; }
 .question-translation-toggle .question-translation { margin: 12px 0 0; }
-.question-source { margin-top: 8px; text-align: left; }
-.question-source > summary { font-size: 18px; }
-.question-source-content { padding: 0 12px 12px; overflow-wrap: anywhere; }
-.question-source-content p { margin: 8px 0; font-size: 18px; }
-.question-source-content a { display: inline-flex; align-items: center; min-height: 56px; }
+.accepted-answers { margin: 12px 0; text-align: left; }
+.accepted-answers > summary { min-height: 56px; padding: 14px 12px; cursor: pointer; border-radius: 8px; font-size: 20px; color: #245541; }
+.accepted-answers ul { padding-left: 24px; font-size: 24px; line-height: 1.5; overflow-wrap: anywhere; }
+.accepted-answers li { margin: 12px 0; }
+.practice-card .answer-area .answer-label { font-size: 18px; font-weight: 700; color: #245541; margin: 0 0 12px; }
+.dynamic-question-list { padding-left: 24px; font-size: 19px; overflow-wrap: anywhere; }
+.dynamic-question-list li { margin: 12px 0; }
+.settings-card .notice a { display: inline-flex; align-items: center; min-height: 56px; }
 .question-translation-toggle > summary:focus-visible,
-.question-source > summary:focus-visible { outline: 3px solid #245541; outline-offset: 3px; }
+.accepted-answers > summary:focus-visible { outline: 3px solid #245541; outline-offset: 3px; }
 
 @theme inline {
   --font-sans: Arial, Helvetica, sans-serif;

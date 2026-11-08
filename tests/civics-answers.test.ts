@@ -20,6 +20,9 @@ import {
 import type { StudyItem } from "../src/lib/types.ts";
 import { initialState } from "../src/lib/engine.ts";
 import { loadProgress, saveProgress, STORAGE_KEY } from "../src/lib/storage.ts";
+import { adaptVocabulary, type SourceSet } from "../src/lib/content-adapter.ts";
+import { VOCABULARY_SETS } from "../src/data/civicsVocabulary.js";
+import { officialQuestions, questionTranslations, CIVICS_2025_SOURCE } from "../src/data/civics2025Examples.js";
 
 const { CivicsQuestionCard } =
   await import("../src/components/civics-question-card.tsx");
@@ -27,7 +30,9 @@ const { LessonScreen } = await import("../src/components/lesson-screen.tsx");
 const raw = JSON.parse(
   readFileSync(new URL("../src/data/civics.json", import.meta.url), "utf8"),
 );
-const supreme = allItems.find((item) => item.questionId === 2)!;
+// Keep legacy import coverage independent of the official 2025 curriculum.
+const legacyItems = adaptVocabulary(VOCABULARY_SETS as SourceSet[], officialQuestions, questionTranslations, CIVICS_2025_SOURCE).items.map(item => attachCivicsAnswers(item, civicsQuestions));
+const supreme = legacyItems.find((item) => item.questionId === 2)!;
 function render(item: StudyItem, revealed = true, mode: "learning" | "practice" = "learning") {
   return renderToStaticMarkup(
     createElement(CivicsQuestionCard, {
@@ -69,13 +74,11 @@ test("beginner questions show translation while practice offers a closed inline 
   assert.doesNotMatch(absent, /Xem tiếng Việt|question-translation/);
 });
 
-test("source metadata is optional, closed, and separate from the question and answer actions", () => {
+test("source metadata and links never appear in the study card", () => {
   for (const mode of ["learning", "practice"] as const) {
     const html = render(supreme, false, mode);
-    assert.match(html, /<details class="question-source"><summary>Thông tin nguồn<\/summary>/);
-    assert.match(html, /USCIS 2025/);
-    assert.match(html, /q001/);
-    assert.ok(html.indexOf("Hiện đáp án") < html.indexOf("Thông tin nguồn"));
+    assert.doesNotMatch(html, /Thông tin nguồn|USCIS 2025|q001|href=/);
+    assert.doesNotMatch(render(supreme, true, mode), /Thông tin nguồn|USCIS 2025|q001|href=/);
     assert.doesNotMatch(html, /Bạn nghe và thử trả lời|sample-tag|<details[^>]*open/);
   }
 });
@@ -85,7 +88,7 @@ test("q001 maps to the exact 2025 question text, not question number 1", () => {
   assert.equal(supreme.answerSourceVersion, "unspecified");
   assert.equal(supreme.answer, "The Constitution.");
   assert.equal(
-    allItems.find((item) => item.questionId === 1)!.answer,
+    legacyItems.find((item) => item.questionId === 1)!.answer,
     undefined,
   );
 });
@@ -99,7 +102,7 @@ test("question translation is visible first and actual bilingual answer appears 
   const after = render(supreme);
   assert.match(after, /The Constitution\./);
   assert.match(after, /Hiến pháp\./);
-  assert.match(after, /Nghe câu trả lời/);
+  assert.match(after, /ĐÁP ÁN/);
   assert.doesNotMatch(after, /chưa có câu trả lời/);
 });
 test("missing Vietnamese translations never hide English answers", () => {
@@ -176,7 +179,7 @@ test("plain, nested array, and bilingual-object array answers retain every alter
     "alternatives",
   ]);
 });
-test("fallback distinguishes a genuinely missing answer from an unmatched question", () => {
+test("missing and unmatched runtime answers show only the short fallback and skip action", () => {
   const missing = {
     ...supreme,
     answer: undefined,
@@ -184,10 +187,11 @@ test("fallback distinguishes a genuinely missing answer from an unmatched questi
     answersVietnamese: [],
     answerStatus: "missing" as const,
   };
-  assert.match(render(missing), /Nguồn dữ liệu chưa có câu trả lời tiếng Anh/);
+  assert.match(render(missing), /Chưa có đáp án cho câu này\./);
+  assert.match(render(missing), /Bỏ qua/);
   assert.match(
     render({ ...missing, answerStatus: "unmatched" }),
-    /Chưa tìm thấy câu hỏi này/,
+    /Chưa có đáp án cho câu này\./,
   );
 });
 test("validation fails on lost, altered, reordered answers and invalid fields, reporting IDs", () => {
@@ -260,15 +264,15 @@ function practiceState(item: StudyItem) {
 
 function renderLesson(state: ReturnType<typeof initialState>, revealed: boolean) {
   return renderToStaticMarkup(createElement(LessonScreen, {
-    state, bank: allItems, today: "2026-11-07", revealed,
+    state, bank: legacyItems, today: "2026-11-07", revealed,
     heading: createRef<HTMLHeadingElement>(), feedback: "", saved: true,
     audioNotice: "", onBack() {}, onReview() {}, onExtra() {}, onFinish() {},
     onContinue() {}, onReveal() {}, onRecall() {}, onPractice() {}, onPlay() {},
   }));
 }
 
-test("every matched real vocabulary example renders its full source answers through LessonScreen", () => {
-  const matched = allItems.filter((item) => item.answerSourceId);
+test("every matched legacy vocabulary example renders its full source answers through LessonScreen", () => {
+  const matched = legacyItems.filter((item) => item.answerSourceId);
   assert.equal(matched.length, 39);
   for (const item of matched) {
     const source = civicsQuestions.find((row) => row.id === item.answerSourceId)!;
@@ -278,18 +282,18 @@ test("every matched real vocabulary example renders its full source answers thro
     for (const answer of source.answers)
       assert.ok(after.includes(renderToStaticMarkup(createElement("h2", { lang: "en" }, answer))), item.id);
     for (const translation of source.answersVietnamese)
-      assert.ok(after.includes(renderToStaticMarkup(createElement("p", { className: "answer-translation" }, translation))), item.id);
+      assert.ok(after.includes(renderToStaticMarkup(createElement("p", { className: "answer-translation", lang: "vi" }, translation))), item.id);
     assert.doesNotMatch(after, /chưa có câu trả lời|Chưa tìm thấy câu hỏi này/);
   }
 });
 
 test("validation detects answers lost after import on the final vocabulary catalog", () => {
-  const report = validateCivicsAnswerAttachments(allItems, civicsQuestions);
+  const report = validateCivicsAnswerAttachments(legacyItems, civicsQuestions);
   assert.equal(report.matchedVocabularyItems, 39);
   assert.equal(report.unmatchedVocabularyIds.length, 113);
   assert.deepEqual(report.lostAnswerVocabularyIds, []);
   for (const field of ["answers", "answersVietnamese", "answerSourceId"] as const) {
-    const damaged = structuredClone(allItems);
+    const damaged = structuredClone(legacyItems);
     const item = damaged.find((row) => row.id === supreme.id)!;
     delete item[field];
     assert.deepEqual(validateCivicsAnswerAttachments(damaged, civicsQuestions).lostAnswerVocabularyIds, [supreme.id]);

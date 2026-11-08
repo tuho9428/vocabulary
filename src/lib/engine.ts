@@ -1,4 +1,5 @@
 import { addDays } from "./dates.ts";
+import { hasUsableCivicsAnswer } from "./uscis-2025.ts";
 import type {
   AppState,
   SessionMode,
@@ -124,7 +125,7 @@ export function startSession(
     mode === "review"
       ? []
       : [...new Set(queue.map((entry) => entry.id))]
-          .filter((id) => bank.some((item) => item.id === id && item.question))
+          .filter((id) => bank.some((item) => item.id === id && item.question && hasUsableCivicsAnswer(item)))
           .slice(0, 3);
   // Reopen the last completion choices rather than inventing an empty new lesson.
   if (mode === "daily" && !queue.length && state.session?.phase === "complete")

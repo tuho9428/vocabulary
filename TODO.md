@@ -1,5 +1,19 @@
 # Implementation progress
 
+## Complete official USCIS 2025 answers and simple answer cards
+
+- [x] Download the original USCIS M-1778 (09/25) PDF, retain its SHA-256-pinned snapshot/text, and create a reproducible import.
+- [x] Bundle all 128 official questions and every answer bullet with stable versioned IDs, official numbers, existing Vietnamese question translations, source pages, and 65/20 markings.
+- [x] Resolve active 2025 answers only by official ID/number/version; keep the unversioned 100-question family bank separate and unchanged.
+- [x] Validate 120 complete static answer sets plus 8 dynamic requirements; no missing static answers, lost bullets, duplicate IDs, or invalid active mappings. All 87 vocabulary question references resolve.
+- [x] Exclude unresolved dynamic/missing questions from new practice queues; preserve existing sessions and provide a short fallback with Bỏ qua that does not grade or alter vocabulary progress.
+- [x] Move attribution, official links, and dynamic-question guidance into family settings; remove source disclosures and links from the lesson card.
+- [x] Show ĐÁP ÁN, a concise recommended answer, optional translation, and Tiếp tục. Retain all accepted alternatives behind an inline disclosure; respect multi-response questions.
+- [x] Preserve vocabulary IDs, Vietnamese question translations, source files, progress, history, and spaced repetition; add source-parity, dynamic exclusion, version separation, UI, and persistence regressions.
+- [x] All 103 tests, data validation, lint, type checking, reproducible import check, and production build pass. Browser at 320px verifies questions 1/17/21, all Q1 alternatives, no source link, automatic Vietnamese question reveal, 62px Continue controls, no horizontal scrolling, and unchanged progress/history.
+
+The official 2025 section above supersedes older notes below about 62 unmatched questions or using family answers for the 2025 curriculum.
+
 ## Simplified citizenship question interface
 
 - [x] Keep one question visible with “Luyện câu hỏi” and the existing Câu current / total count; remove redundant question instructions and the extra footer hint.

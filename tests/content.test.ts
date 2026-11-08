@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import {
   allItems,
-  civicsQuestions,
+  official2025Questions,
   contentReport,
   getBank,
 } from "../src/lib/content.ts";
@@ -36,17 +36,15 @@ test("all adapted records preserve source IDs, words, translations, references, 
     assert.equal(item.level, word.level);
     assert.deepEqual(item.questionIds, word.questionIds);
     assert.equal(item.questionId, word.example.questionId);
-    assert.equal(item.question, word.example.english);
+    const official = official2025Questions.find(q => q.number === word.example.questionId)!;
+    assert.equal(item.question, official.question);
     assert.equal(item.questionVietnamese, word.example.vietnamese);
     assert.equal(item.source, CIVICS_2025_SOURCE);
     assert.equal(item.sourceRevision, "M-1778, 09/25");
     assert.equal(item.sourceVersion, "2025");
-    const match = civicsQuestions.find(
-      (row) => row.question.en === word.example.english,
-    );
-    assert.equal(item.answer, match?.answers[0]);
-    assert.deepEqual(item.answers, match?.answers);
-    assert.deepEqual(item.answersVietnamese, match?.answersVietnamese);
+    assert.equal(item.answer, official.answers[0]);
+    assert.deepEqual(item.answers, official.answers);
+    assert.deepEqual(item.answersVietnamese, official.answersVietnamese ?? []);
     // Added recordings augment the source; they do not alter its vocabulary fields.
     if (item.audio) assert.match(item.audio, /^\/audio\//);
   });

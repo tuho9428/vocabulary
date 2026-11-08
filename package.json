@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "predev": "npm run sync:audio",
-    "prebuild": "npm run sync:audio",
+    "prebuild": "npm run sync:audio && npm run validate:data",
     "pretest": "npm run sync:audio",
     "sync:audio": "node --experimental-strip-types scripts/sync-audio.ts",
+    "import:uscis2025": "node --experimental-strip-types scripts/import-uscis-2025.ts",
     "prepare:pronunciation": "node --experimental-strip-types scripts/prepare-pronunciation.ts",
     "import:pronunciation": "node --experimental-strip-types scripts/import-pronunciation.ts",
     "dev": "next dev --webpack",
