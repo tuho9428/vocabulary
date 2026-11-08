@@ -2,11 +2,12 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { VOCABULARY_SETS } from "../src/data/civicsVocabulary.js";
 import { isLocalAudioPath, type AudioManifest } from "../src/lib/recordings.ts";
+import { normalizeAnswers } from "../src/lib/civics-adapter.ts";
 
 type CivicsAudioRow = {
   id: string;
   question: { en: string };
-  answer?: { en?: string };
+  answer?: unknown;
   audio?: { question?: { en?: string }; answer?: { en?: string } };
 };
 const root = new URL("../", import.meta.url);
@@ -43,7 +44,7 @@ for (const row of rows) {
     manifest.questions.push({
       question: row.question.en,
       questionAudio,
-      answer: row.answer?.en,
+      answer: normalizeAnswers(row.answer).en.join(" ") || undefined,
       answerAudio,
     });
 }

@@ -32,7 +32,7 @@ test("the three supplied Vietnamese readings attach to the existing vocabulary I
       allItems.some((item) => item.id === id),
       `Unknown reading ID ${id}`,
     );
-    assert.ok(reading.trim());
+    assert.equal(typeof reading, "string");
   }
 });
 
@@ -41,7 +41,9 @@ test("missing Vietnamese readings stay absent instead of converting English resp
   allItems.forEach((item, index) => {
     assert.equal(
       item.pronunciationVi,
-      source[index].pronunciationVi?.trim() || readings[item.id],
+      source[index].pronunciationVi?.trim() ||
+        readings[item.id]?.trim() ||
+        undefined,
     );
     assert.equal(item.pronunciation, source[index].pronunciation);
     assert.equal(item.english, source[index].english);

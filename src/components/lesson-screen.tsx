@@ -78,8 +78,11 @@ export function LessonScreen({
   );
   // Recall tests meaning only. Pronunciation help is always available.
   const showMeaning = entry?.kind === "new" || revealed;
+  const questionMode = session.queue.some(
+    (queued) => queued.id === item?.id && queued.kind === "new",
+  ) ? "learning" : "practice";
   return (
-    <div className="study-wrap">
+    <div className={`study-wrap${session.phase === "practice" ? " question-session" : ""}`}>
       <button className="back-button" onClick={onBack}>
         ← Về trang chính
       </button>
@@ -154,9 +157,9 @@ export function LessonScreen({
       ) : item ? (
         <>
           <div className="study-heading">
-            <span className="eyebrow">
+            <span className={session.phase === "practice" ? "question-session-title" : "eyebrow"}>
               {session.phase === "practice"
-                ? "NGHE VÀ HIỂU CÂU HỎI"
+                ? "Luyện câu hỏi"
                 : entry.kind === "new"
                   ? session.mode === "extra"
                     ? "HỌC THÊM · TỪ MỚI"
@@ -250,11 +253,22 @@ export function LessonScreen({
               )}
             </section>
           ) : (
-            <CivicsQuestionCard item={item} revealed={revealed} heading={heading} onPlay={onPlay} onReveal={onReveal} onContinue={onPractice} />
+            <CivicsQuestionCard
+              key={`${item.id}:${questionMode}`}
+              item={item}
+              mode={questionMode}
+              revealed={revealed}
+              heading={heading}
+              onPlay={onPlay}
+              onReveal={onReveal}
+              onContinue={onPractice}
+            />
           )}
-          <p className="study-hint">
-            Không cần vội. Bạn có thể nghe lại nhiều lần.
-          </p>
+          {session.phase === "study" && (
+            <p className="study-hint">
+              Không cần vội. Bạn có thể nghe lại nhiều lần.
+            </p>
+          )}
         </>
       ) : (
         <p className="notice">

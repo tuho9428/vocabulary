@@ -1,5 +1,30 @@
 # Implementation progress
 
+## Simplified citizenship question interface
+
+- [x] Keep one question visible with “Luyện câu hỏi” and the existing Câu current / total count; remove redundant question instructions and the extra footer hint.
+- [x] Keep English large, audio replay prominent, and Hiện đáp án primary; reduce spacing while retaining 56px minimum touch targets.
+- [x] Show Vietnamese immediately for questions from new-word learning; use an inline, keyboard-accessible “Xem tiếng Việt” disclosure for questions from reviewed words.
+- [x] Move version, question number, revision, answer provenance, and document link into collapsed “Thông tin nguồn”; reset disclosures for each question.
+- [x] Preserve all data, answer mappings, storage, and scheduling. Fix older test assumptions with explicit absent-reading/current-export fixtures rather than editing approved pronunciation data.
+- [x] All 92 tests, lint, type checking, data validation, and production build pass. Verify learning and practice at 320px: no horizontal scroll, hidden answers, independent translation reveal, source expansion, English audio replay, and unchanged saved progress.
+
+## Citizenship answer regression verification
+
+- [x] Reinspect the actual 100 nested bilingual source answers and the vocabulary-to-card import path.
+- [x] Extend data validation to the final vocabulary catalog: 39 matched examples, zero lost answer attachments; list 113 unmatched example IDs separately.
+- [x] Render every matched example through LessonScreen, detect dropped English/Vietnamese attachments, and test saved-session restoration without changing progress or schedules.
+- [x] Pass all 89 tests, lint, type checking, data validation, and production build. Browser confirms q001 answers The Constitution. / Hiến pháp. and restores the same question after refresh.
+- [x] Keep the separate coverage gap explicit: 62 of 87 2025 questions have no exact question in the unversioned civics.json source. All 100 source answers remain intact; no version-number crosswalk or fabricated answers.
+
+## Complete pronunciation template and human worksheet
+
+- [x] Complete 152 stable-ID template keys: 3 preserved approved readings, 149 empty placeholders.
+- [x] Export 152 UTF-8/BOM CSV rows in source order with English, Vietnamese meaning, reading, and separate finalSound.
+- [x] Add an atomic, ID-validated importer with dry-run/override and conflict/missing summaries; never modify final sounds or delete entries.
+- [x] Document editing/import workflow and test Unicode, CSV quoting, conflicts, blanks, unknown/duplicate IDs, and UI empty handling. Real unchanged import leaves all three files byte-identical.
+- [x] All 86 tests, lint, type checking, data validation, and production build pass; browser confirms empty readings and final-sound tips work. No progress or scheduling changes.
+
 ## civics.json answers
 
 - [x] Inspect all 100 source rows: answer is a nested object with en/vi strings, all nonempty.
@@ -7,8 +32,8 @@
 - [x] Bundle all original questions/answers; normalize string, bilingual-object, and array answers losslessly.
 - [x] Match active examples by exact English text and explicit compatible versions, keeping unspecified provenance visible; preserve original IDs and schedules.
 - [x] Show question translation before reveal and actual English/Vietnamese answers after Hiện đáp án.
-- [ ] Validate all source/imported answers and report genuinely unmatched 2025 questions separately.
-- [ ] Add regressions; run tests, lint, type checking, validation, browser checks, and production build.
+- [x] Validate 100/100 source/imported answers with zero lost/invalid/empty answers; separately report 62 unmatched 2025 questions.
+- [x] Add regressions and pass all checks/build. Browser q001 → 2025 question 2 reveals The Constitution. / Hiến pháp.; refresh preserves progress and answers.
 
 Current rule: pronunciation assistance is always visible in vocabulary review; only meaning and response buttons wait for reveal. This supersedes older hide-all notes below.
 

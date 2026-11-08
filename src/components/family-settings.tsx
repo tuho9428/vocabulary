@@ -27,9 +27,10 @@ export function Settings({
         Cài đặt bài học
       </h1>
       <p>
-        Bộ dữ liệu hiện có 152 từ và 87 câu hỏi tiếng Anh thuộc phiên bản 2025.
-        Chưa có dữ liệu phiên bản 2008. Tiến độ từ bản cũ vẫn được giữ lại khi
-        nâng cấp.
+        Bộ từ vựng hiện có 152 từ và 87 câu hỏi tiếng Anh thuộc phiên bản 2025.
+        Bộ câu hỏi gia đình có thêm 100 câu kèm đáp án, chưa ghi phiên bản đề.
+        Ứng dụng chỉ ghép đáp án khi nội dung câu hỏi khớp; giữ riêng nguồn và
+        số câu của từng bộ.
       </p>
       <form
         onSubmit={(event) => {
@@ -109,8 +110,8 @@ export function Settings({
           <p>
             Giữ nguyên từ, nghĩa tiếng Việt, cách đọc và câu hỏi từ bộ dữ liệu
             đã cung cấp (M-1778, 09/25). Bản thu chỉ được ghép khi khớp đúng nội
-            dung câu hỏi. Bộ từ vựng chưa có đáp án được xác minh; ứng dụng
-            không tự tạo hoặc lấy đáp án từ bộ đề khác.
+            dung câu hỏi. Đáp án gia đình được giữ nguyên từ civics.json và ghi
+            rõ nguồn; các câu hỏi không khớp vẫn cần đối chiếu tài liệu USCIS.
           </p>
           <a
             href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"

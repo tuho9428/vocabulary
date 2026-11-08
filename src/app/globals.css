@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+.question-translation {
+  color: #536656;
+  font-size: 21px;
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+
 .pronunciation-guide > .audio-button {
   margin-bottom: 18px;
 }
@@ -70,8 +77,44 @@
   margin-top: 0;
 }
 .practice-card .answer-area > .primary {
-  margin-top: 24px;
+  margin-top: 16px;
 }
+
+.question-session .back-button { margin-bottom: 4px; }
+.question-session .study-heading { font-size: 20px; flex-wrap: wrap; }
+.question-session-title { font-size: 22px; font-weight: 600; }
+.question-session .study-progress { margin-bottom: 14px; }
+.question-session .practice-card { padding: 24px 20px 8px; }
+.study-card.practice-card h1 {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 5vw, 38px);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.practice-card .question-translation { color: #365342; margin: 0 0 16px; }
+.practice-card > .audio-button { width: 100%; }
+.practice-card > .primary { margin-top: 16px; }
+.practice-card .answer-area { margin-top: 16px; padding-top: 16px; }
+.question-translation-toggle { margin-bottom: 12px; }
+.question-translation-toggle > summary,
+.question-source > summary {
+  min-height: 56px;
+  padding: 14px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #245541;
+  overflow-wrap: anywhere;
+}
+.question-translation-toggle > summary { background: #f0f3eb; }
+.question-translation-toggle .question-translation { margin: 12px 0 0; }
+.question-source { margin-top: 8px; text-align: left; }
+.question-source > summary { font-size: 18px; }
+.question-source-content { padding: 0 12px 12px; overflow-wrap: anywhere; }
+.question-source-content p { margin: 8px 0; font-size: 18px; }
+.question-source-content a { display: inline-flex; align-items: center; min-height: 56px; }
+.question-translation-toggle > summary:focus-visible,
+.question-source > summary:focus-visible { outline: 3px solid #245541; outline-offset: 3px; }
 
 @theme inline {
   --font-sans: Arial, Helvetica, sans-serif;

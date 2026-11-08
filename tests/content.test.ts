@@ -1,7 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
-import { allItems, contentReport, getBank } from "../src/lib/content.ts";
+import {
+  allItems,
+  civicsQuestions,
+  contentReport,
+  getBank,
+} from "../src/lib/content.ts";
 import { adaptVocabulary, type SourceSet } from "../src/lib/content-adapter.ts";
 import { VOCABULARY_SETS } from "../src/data/civicsVocabulary.js";
 import {
@@ -36,7 +41,12 @@ test("all adapted records preserve source IDs, words, translations, references, 
     assert.equal(item.source, CIVICS_2025_SOURCE);
     assert.equal(item.sourceRevision, "M-1778, 09/25");
     assert.equal(item.sourceVersion, "2025");
-    assert.equal(item.answer, undefined);
+    const match = civicsQuestions.find(
+      (row) => row.question.en === word.example.english,
+    );
+    assert.equal(item.answer, match?.answers[0]);
+    assert.deepEqual(item.answers, match?.answers);
+    assert.deepEqual(item.answersVietnamese, match?.answersVietnamese);
     // Added recordings augment the source; they do not alter its vocabulary fields.
     if (item.audio) assert.match(item.audio, /^\/audio\//);
   });
@@ -45,7 +55,10 @@ test("all adapted records preserve source IDs, words, translations, references, 
 test("content validation reports absent optional fields without fabricating them", () => {
   assert.deepEqual(contentReport.errors, []);
   assert.equal(contentReport.questions, 87);
-  assert.equal(contentReport.missingAnswers.length, 152);
+  assert.deepEqual(
+    contentReport.missingAnswers,
+    allItems.filter((item) => !item.answers?.length).map((item) => item.id),
+  );
   assert.equal(contentReport.missingAudio.length, 152);
   assert.equal(contentReport.missingPronunciation.length, 0);
   assert.equal(getBank("2025").length, 152);

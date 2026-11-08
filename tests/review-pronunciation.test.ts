@@ -87,18 +87,22 @@ for (const { name, mode, includeEarly } of [
     assert.deepEqual(state, before);
   });
   test(`${name} cards work without pronunciation data and do not invent a tip`, () => {
+    // Use an explicit absent-data fixture; approved readings may be added later.
+    const bank = allItems.map((item) => item.id === "question-words-who"
+      ? { ...item, pronunciationVi: undefined, finalSound: undefined }
+      : item);
     const state = startSession(
       learned("question-words-who"),
-      allItems,
+      bank,
       today,
       mode,
       includeEarly,
     );
-    const hidden = render(state, false);
+    const hidden = render(state, false, bank);
     assert.match(hidden, /Nghe phát âm/);
     assert.match(hidden, /Hiện đáp án/);
     assert.doesNotMatch(hidden, /final-sound-tip|pronunciation-vi|>ai<\/h2>/);
-    const revealed = render(state, true);
+    const revealed = render(state, true, bank);
     assert.match(revealed, />ai<\/h2>/);
     assert.doesNotMatch(revealed, /final-sound-tip/);
   });

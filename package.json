@@ -8,6 +8,8 @@
     "prebuild": "npm run sync:audio",
     "pretest": "npm run sync:audio",
     "sync:audio": "node --experimental-strip-types scripts/sync-audio.ts",
+    "prepare:pronunciation": "node --experimental-strip-types scripts/prepare-pronunciation.ts",
+    "import:pronunciation": "node --experimental-strip-types scripts/import-pronunciation.ts",
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",

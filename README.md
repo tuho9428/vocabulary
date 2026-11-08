@@ -24,7 +24,29 @@ The scripts use Next.js's supported Webpack bundler because the supplied Windows
 
 Vietnamese reading guides use the optional `pronunciationVi` field. Learning cards show the English word, an available Vietnamese reading, the original Vietnamese meaning, and the English speaker button. Review, voluntary practice, and retries always show available pronunciation assistance. Only the Vietnamese meaning and recall response buttons wait for **Hiện đáp án**. Old English-style respellings and IPA are not displayed by default.
 
-The source currently has English-style respellings but no Vietnamese phonetic readings. `src/content/pronunciation-vi.json` supplements the unchanged source with only the three readings supplied by the user: what → Quát, why → Quai, how → Hao. The other readings remain absent. To add a supplied/reviewed reading, use the existing word ID in that file; an explicit `pronunciationVi` in future source data takes precedence. There is no automatic letter-substitution generator. These approximations support reading, while audio always plays the original English word in en-US or its matching recording. Playback is never automatic.
+The source currently has English-style respellings but no Vietnamese phonetic readings. `src/content/pronunciation-vi.json` contains every existing vocabulary ID in source order: 152 entries, including the three supplied readings (what → Quát, why → Quai, how → Hao) and 149 empty strings for readings awaiting human approval. Empty strings resolve to an absent reading in the UI. An explicit `pronunciationVi` in future source data takes precedence. There is no automatic letter-substitution generator. These approximations support reading, while audio always plays the original English word in en-US or its matching recording. Playback is never automatic.
+
+## Human pronunciation worksheet
+
+Edit `src/content/pronunciation-worksheet.csv` in a UTF-8-capable spreadsheet editor. It has columns `id`, `english`, `vietnameseMeaning`, `pronunciationVi`, and `finalSound`, in the original learning order. It uses UTF-8 with a BOM for Vietnamese text in Excel, quoted fields, and CRLF rows. Only fill reviewed readings in `pronunciationVi`; all other columns are reference data.
+
+```sh
+# Preview the import without writing anything
+npm run import:pronunciation -- --dry-run
+
+# Import approved nonempty readings from the default worksheet
+npm run import:pronunciation
+
+# Read a different UTF-8 CSV
+npm run import:pronunciation -- --input "path/to/reviewed.csv" --dry-run
+
+# Explicitly allow replacing conflicting existing nonempty readings
+npm run import:pronunciation -- --override
+```
+
+The importer matches only stable IDs and imports only `pronunciationVi`. It rejects unknown or repeated IDs, malformed CSV, and conflicting nonempty readings. A rejected import writes nothing, including otherwise valid additions. `--override` permits deliberate nonempty replacements; blank cells never erase approved readings. Missing worksheet rows leave existing entries intact. Output reports proposed added/unchanged/conflicting/overridden counts, remaining missing readings, and whether changes were applied. A dry run reports proposals only. Successful imports replace the JSON atomically and never touch final sounds, vocabulary data, or learning progress.
+
+`npm run prepare:pronunciation` fills missing template keys and creates the worksheet if it does not exist, preserving an existing worksheet's manual edits. After importing edits, `npm run prepare:pronunciation -- --refresh-worksheet` explicitly rebuilds the worksheet from approved JSON and source metadata. Do not use that refresh flag before importing edits you want to keep. `final-sounds.json` remains separate; its phonemes are never inferred from the written English word or imported from CSV.
 
 Optional `finalSound` metadata adds a short Vietnamese ending tip. Supported tips cover t, d, n, s, and z; other explicit phonemes get a neutral reminder to listen to English audio and avoid an added vowel. No ending is inferred from spelling or a Vietnamese guide. `src/content/final-sounds.json` stores five individually checked existing words and CMUdict reference links: what, decide, citizen, Congress, and taxes. Explicit source fields take precedence. Other words stay unset, and the existing Vietnamese mappings remain unchanged.
 
@@ -44,7 +66,7 @@ English audio prefers a recorded file, with browser speech as fallback when no r
 
 ## Adding recorded or AI-generated audio
 
-The app supports ordinary audio files; no AI service or API key is needed at runtime. Existing files in `public/audio/civics` are indexed using `src/data/civics.json`. That JSON uses a different numbering scheme and has no explicit test-version metadata, so recordings are matched by exact English question text, **never by question number**. For example, its `Q1en.mp3` reads the question used as number 2 in the active 2025 bank. The JSON does not replace the active question bank or supply unverified answers to it.
+The app supports ordinary audio files; no AI service or API key is needed at runtime. Existing files in `public/audio/civics` are indexed using `src/data/civics.json`. That JSON uses a different numbering scheme and has no explicit test-version metadata, so recordings and answers are matched by exact English question text, **never by question number**. For example, its `Q1en.mp3` reads the question used as number 2 in the active 2025 bank. Original question-bank numbering and answer provenance remain separate.
 
 Currently 34 English question recordings and 34 answer recordings exist. Six distinct questions (11 vocabulary examples) match the active bank and have recordings. No isolated word recordings exist yet. The 132 referenced English files not yet present are omitted from the generated manifest. The supplied Vietnamese files are retained; current playback controls are for English.
 
@@ -55,7 +77,7 @@ public/audio/civics/words/en/question-words-what.mp3
 public/audio/civics/words/en/voting-citizenship-citizen.mp3
 ```
 
-For question/answer recordings, use the paths already declared in `src/data/civics.json` and record exactly the corresponding English text. An answer recording is only used if the active study item already has an approved answer with matching text; audio metadata does not automatically approve answers.
+For question/answer recordings, use the paths already declared in `src/data/civics.json` and record exactly the corresponding English text. An answer recording is used only when its question and full answer text match the imported item; audio metadata never substitutes for missing answer content.
 
 Then run `npm run sync:audio`. It regenerates `src/content/audio-manifest.json` with existing local files only. Sync also runs automatically before `dev`, `test`, and `build`. If the development server is already open, running sync enables newly added files without component edits. Commit the generated manifest and audio files with the app. Production uses bundled paths such as `/audio/civics/en/Q1en.mp3`, with no absolute filesystem dependency.
 
@@ -71,9 +93,17 @@ The read-only source is bundled directly from `src/data`:
 
 The typed adapter preserves source word IDs, meanings, pronunciation guides, categories, levels, and question references. There is no generated placeholder vocabulary in the active catalog. The previous sample JSON remains an unused historical file.
 
-**Missing fields in the versioned vocabulary source:** no official answers, isolated word recordings, or 2008 dataset were supplied. Nothing is fabricated to fill those gaps. The separate, unversioned `civics.json` supplies recording metadata, not a replacement test bank. Question practice displays the source question and its Vietnamese translation, explains the missing answer, and links to the supplied USCIS document. Selecting 2008 displays an unavailable-data explanation; 2025 content is never mislabeled as 2008.
+The separate `civics.json` contains **100 questions with 100 nested bilingual answers** (`answer.en` and `answer.vi`). All are bundled intact as `civicsQuestions`. Previously `content.ts` ignored this curriculum source and `adaptVocabulary()` read the absent `example.answer` field from the vocabulary module, leaving UI answers undefined. The dedicated civics adapter now preserves every source answer and translation. It also supports arrays of alternatives and plain strings, without splitting semicolon-containing source strings or changing their wording.
+
+The source declares no test version. Its original IDs and unspecified provenance are retained; explicitly different versions are never joined. Exact English question matching supplies answers to **25 of the 87 separate 2025 questions**, covering 39 current vocabulary examples. The remaining **62 questions** have no exact source match (113 vocabulary examples), so the UI reports an unmatched question rather than falsely claiming `civics.json` has no answers. No answer is invented for these. Original English questions and 2025 translations remain unchanged, and matched family answers identify their source ID and unspecified version. There is still no separately verified 2008 vocabulary bank or isolated-word audio set.
+
+Citizenship cards show one large English question at a time under **Luyện câu hỏi**, with a clear **Câu 1 / 3** count, English audio replay, and **Hiện đáp án**. Questions associated with newly learned words show the Vietnamese question translation immediately; questions associated with reviewed words offer it through an inline **Xem tiếng Việt** disclosure. Translation assistance does not reveal the answer. Source version, question number, document revision, answer provenance, and the document link are available in the optional **Thông tin nguồn** section. Both disclosures reset when the question changes. Controls retain at least 56px touch targets, including on small phones.
+
+Reveal shows the actual English answer(s), available Vietnamese answer translation(s), and answer audio. Missing Vietnamese never hides English. `npm run validate:data` reports source/imported answer counts, invalid/empty answers, lost/altered answer IDs, and unmatched 2025 question IDs. It exits unsuccessfully if a supplied answer or translation disappears or changes during import. Current result: 100/100 questions have answers before and after import, with zero lost, invalid, or empty source answers.
 
 See [DATA_REPORT.md](DATA_REPORT.md) for structures, validation results, limitations, and source fingerprints. No import/sync step or runtime Windows path is needed because the source directory is already inside the repository.
+
+Validation also checks the final vocabulary catalog consumed by `LessonScreen`, not just the intermediate JSON import. It lists unmatched vocabulary IDs separately and fails if a matched source answer, translation, or provenance disappears before rendering. Regression tests render all 39 matching examples through the lesson component and restore a saved practice session without changing its progress or review dates.
 
 ## Persistence and upgrades
 
@@ -106,7 +136,7 @@ npm run build
 
 Tests use Node's built-in runner. Coverage includes recommendations and unlimited extra batches, no duplicate introductions, due-first review, early-practice schedule preservation, failed recalls, calendar rollover, resume, paused lessons, version isolation, schema migration, corruption/quota recovery, real-data parity, and the Vietnamese pronoun update.
 
-All **69 tests**, lint, type checking, and the production build pass with meaning-only recall. Rendered-card tests cover home due review, Luyện tất cả, daily review, retries, Why → Quai before reveal, missing pronunciation fields, and restored-session hints. Browser checks verified all three entry points, meaning reveal while hints remain visible, both response buttons, refresh persistence, and unchanged early-practice dates; the console was clean. Earlier verification covered original-English/en-US replay, no autoplay, and recorded-audio playback/fallback. The scheduling algorithm, progress schema, source data, and vocabulary IDs are unchanged.
+All **86 tests**, lint, type checking, data validation, and the production build pass. New coverage verifies complete pronunciation templates/worksheets, Vietnamese CSV round-trips, safe conflict/override handling, source answer parity, multiple answers, missing translations, and genuine fallback cases. A real unchanged CSV import left the pronunciation JSON, worksheet, and final-sound file byte-identical. Browser checks confirmed empty readings work, approved guides and ending tips remain visible, original bilingual citizenship answers reveal correctly, and refresh retains progress. The scheduling algorithm, progress schema, source data, and vocabulary IDs are unchanged.
 
 Browser checks exercise three-word completion, extra learning, refresh resume, voluntary review without postponing due dates, next-day due reviews, migration, exhaustion, and narrow layouts. Actual speech availability and usability should also be checked on the learner's device.
 
