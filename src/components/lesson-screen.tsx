@@ -210,7 +210,6 @@ export function LessonScreen({
               </h1>
               <PronunciationGuide
                 reading={item.pronunciationVi}
-                finalSound={item.finalSound}
               >
                 {entry.kind !== "new" && (
                   <AudioButton

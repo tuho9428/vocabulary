@@ -12,6 +12,7 @@ const { LessonScreen } = await import("../src/components/lesson-screen.tsx");
 const { PronunciationGuide } =
   await import("../src/components/pronunciation-guide.tsx");
 const today = "2026-11-07";
+const endingUi = /final-sound-tip|english-ending|phonetic-explanation|Âm cuối|Không thêm tờ|Không thêm đờ|Giữ âm n|tiếng sss|không thêm nguyên âm/;
 function learned(...ids: string[]) {
   const state = initialState();
   for (const id of ids)
@@ -70,17 +71,14 @@ for (const { name, mode, includeEarly } of [
     assert.match(hidden, /Nghe phát âm/);
     assert.match(hidden, /Hiện đáp án/);
     assert.match(hidden, /Quát/);
-    assert.match(hidden, /final-sound-tip/);
-    assert.match(hidden, /Không thêm tờ/);
+    assert.doesNotMatch(hidden, endingUi);
     assert.doesNotMatch(hidden, /gì \/ cái gì|Nhớ rồi|Chưa nhớ/);
     assert.ok(hidden.indexOf("Quát") < hidden.indexOf("Nghe phát âm"));
-    assert.ok(hidden.indexOf("Nghe phát âm") < hidden.indexOf("Không thêm tờ"));
-    assert.ok(hidden.indexOf("Không thêm tờ") < hidden.indexOf("Hiện đáp án"));
+    assert.ok(hidden.indexOf("Nghe phát âm") < hidden.indexOf("Hiện đáp án"));
     const revealed = render(state, true);
     assert.match(revealed, /Quát/);
     assert.match(revealed, /gì \/ cái gì/);
-    assert.match(revealed, /final-sound-tip/);
-    assert.match(revealed, /Không thêm tờ/);
+    assert.doesNotMatch(revealed, endingUi);
     assert.match(revealed, /Nhớ rồi/);
     assert.match(revealed, /Chưa nhớ/);
     assert.doesNotMatch(revealed, /<details|<summary/);
@@ -126,26 +124,26 @@ test("restored review IDs resolve to current catalog metadata, not a reduced sav
   const restored = loadProgress(storage, allItems).state;
   assert.deepEqual(restored, state);
   assert.equal(restored.session!.queue[0].id, "question-words-what");
-  assert.match(render(restored, true), /Không thêm tờ/);
-  assert.match(render(restored, false), /final-sound-tip/);
+  assert.match(render(restored, true), /Quát/);
+  assert.doesNotMatch(render(restored, true), endingUi);
+  assert.doesNotMatch(render(restored, false), endingUi);
   assert.doesNotMatch(render(restored, false), /gì \/ cái gì/);
 });
 
-test("an ending tip renders without pronunciationVi, and supplied hybrid notes need no extra click", () => {
+test("supplied hybrid readings remain verbatim without final-sound labels or explanations", () => {
   const state = startSession(
     learned("basic-test-verbs-decide"),
     allItems,
     today,
     "review",
   );
-  assert.match(render(state, true), /Không thêm đờ/);
-  assert.match(render(state, false), /Không thêm đờ/);
+  assert.doesNotMatch(render(state, true), endingUi);
+  assert.doesNotMatch(render(state, false), endingUi);
   const hybrid = renderToStaticMarkup(
-    createElement(PronunciationGuide, { reading: "Be(d)", finalSound: "d" }),
+    createElement(PronunciationGuide, { reading: "Be(d)" }),
   );
-  assert.match(hybrid, /english-ending/);
-  assert.match(hybrid, /\(d\)/);
-  assert.match(hybrid, /không thêm nguyên âm/);
+  assert.match(hybrid, />Be\(d\)<\/p>/);
+  assert.doesNotMatch(hybrid, endingUi);
   assert.doesNotMatch(hybrid, /<button|<summary|<details/);
 });
 
@@ -175,6 +173,34 @@ test("retry cards retain pronunciation help but hide meaning again", () => {
   assert.equal(state.session!.queue[state.session!.cursor].kind, "retry");
   const hidden = render(state, false);
   assert.match(hidden, /Quát/);
-  assert.match(hidden, /Không thêm tờ/);
+  assert.doesNotMatch(hidden, endingUi);
   assert.doesNotMatch(hidden, /gì \/ cái gì/);
+});
+
+test("all 152 new-word cards preserve the exact supplied reading, meaning and audio without ending UI", () => {
+  for (const item of allItems) {
+    const state = startSession(initialState(), [item], today, "daily");
+    const html = render(state, false, [item]);
+    assert.ok(item.pronunciationVi?.trim(), item.id);
+    const reading = renderToStaticMarkup(createElement("p", { className: "pronunciation-vi", lang: "vi" }, item.pronunciationVi));
+    assert.ok(html.includes(reading), item.id);
+    assert.match(html, /Nghe phát âm/);
+    assert.ok(html.includes(renderToStaticMarkup(createElement("h2", null, item.vietnamese))), item.id);
+    assert.doesNotMatch(html, endingUi, item.id);
+  }
+});
+
+test("all retained final-sound metadata stays invisible in every review mode before and after reveal", () => {
+  for (const item of allItems.filter(item => item.finalSound)) {
+    for (const mode of ["daily", "review"] as const) {
+      const state = startSession(learned(item.id), [item], today, mode, true);
+      for (const revealed of [false, true]) {
+        const html = render(state, revealed, [item]);
+        assert.doesNotMatch(html, endingUi, item.id);
+        assert.match(html, /pronunciation-vi/);
+        assert.match(html, /Nghe phát âm/);
+        assert.equal(html.includes(renderToStaticMarkup(createElement("h2", null, item.vietnamese))), revealed);
+      }
+    }
+  }
 });

@@ -1,5 +1,15 @@
 # Implementation progress
 
+## Remove ending-sound guidance from learner vocabulary cards
+
+- [x] Show supplied Vietnamese phonetic readings verbatim with English, meaning, and audio; remove ending tips, ending labels/highlights, pronunciation labels, and parenthesis help text.
+- [x] Apply the shared display to new words, home review, Luyện tất cả, daily reviews, retries, and refreshed sessions. Review meaning remains hidden until Hiện đáp án.
+- [x] Remove the unused UI-only pronunciation-tip helpers and styles; retain final-sound data, mappings, IDs, progress, scheduling, and audio functionality.
+- [x] Update affected UI tests while keeping final-sound data-preservation tests; verify all 152 learning cards and all retained final-sound entries across review states.
+- [x] All 102 tests, lint, type checking, data validation, and production build pass. Both pronunciation JSON files remain byte-identical.
+
+This simplified display supersedes earlier notes about showing final-sound tips in vocabulary cards.
+
 ## Complete official USCIS 2025 answers and simple answer cards
 
 - [x] Download the original USCIS M-1778 (09/25) PDF, retain its SHA-256-pinned snapshot/text, and create a reproducible import.
