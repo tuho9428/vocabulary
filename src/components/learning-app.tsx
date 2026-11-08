@@ -13,13 +13,13 @@ import { localDate } from "@/lib/dates";
 import { loadProgress, saveProgress, STORAGE_KEY } from "@/lib/storage";
 import { playEnglishAudio, stopAudio } from "@/lib/audio";
 import type { AppState, SessionMode } from "@/lib/types";
+import { viewFromHash, type View } from "@/lib/navigation";
 
 import { Settings } from "./family-settings";
 import { HomeScreen } from "./home-screen";
 import { LessonScreen } from "./lesson-screen";
 import { ReviewScreen } from "./review-screen";
 
-type View = "home" | "lesson" | "review" | "family" | "settings" | "help";
 // Access localStorage inside the adapter so blocked storage getters are caught too.
 const browserStorage = {
   getItem: (key: string) => window.localStorage.getItem(key),
@@ -47,8 +47,12 @@ export function LearningApp() {
   const [revealed, setRevealed] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [saved, setSaved] = useState(false);
+  const [storageAvailable, setStorageAvailable] = useState(true);
   const heading = useRef<HTMLHeadingElement>(null);
   const hydrated = useRef(false);
+  const writesBlocked = useRef(false);
+  const initialNavigation = useRef<{ view: View; addHome: boolean } | null>(null);
+  const hasSession = !!state.session;
 
   useEffect(() => {
     // Strict Mode repeats effect setup in development. Run migration once so
@@ -56,13 +60,16 @@ export function LearningApp() {
     if (!hydrated.current) {
       const loaded = loadProgress(browserStorage, allItems);
       hydrated.current = true;
-      /* eslint-disable react-hooks/set-state-in-effect */
       setState(loaded.state);
       setNotice(loaded.notice);
+      writesBlocked.current = !!loaded.writeBlocked;
+      setStorageAvailable(!loaded.writeBlocked);
       setReady(true);
-      if (loaded.state.session && loaded.state.session.phase !== "complete")
-        setView("lesson");
-      /* eslint-enable react-hooks/set-state-in-effect */
+      const restoredView = viewFromHash(window.location.hash, !!loaded.state.session);
+      const initialView = restoredView ??
+        (loaded.state.session && loaded.state.session.phase !== "complete" ? "lesson" : "home");
+      initialNavigation.current = { view: initialView, addHome: !restoredView && initialView === "lesson" };
+      setView(initialView);
     }
     const refreshDate = () => setToday(localDate());
     const onStorage = (event: StorageEvent) => {
@@ -82,6 +89,34 @@ export function LearningApp() {
   }, []);
 
   useEffect(() => {
+    if (!ready || !initialNavigation.current) return;
+    const navigation = initialNavigation.current;
+    initialNavigation.current = null;
+    // Run after hydration, when Next's History API integration is installed.
+    // Passing null lets Next copy its own state and synchronize the current URL.
+    if (navigation.addHome) {
+      window.history.replaceState(null, "", "#home");
+      window.history.pushState(null, "", "#lesson");
+    } else {
+      window.history.replaceState(null, "", `#${navigation.view}`);
+    }
+  }, [ready]);
+
+  useEffect(() => {
+    const onBackOrForward = () => {
+      // The skip link moves focus within the current screen, not to home.
+      if (window.location.hash === "#main") return;
+      stopAudio();
+      setAudioNotice("");
+      setRevealed(false);
+      setFeedback("");
+      setView(viewFromHash(window.location.hash, hasSession) ?? "home");
+    };
+    window.addEventListener("popstate", onBackOrForward);
+    return () => window.removeEventListener("popstate", onBackOrForward);
+  }, [hasSession]);
+
+  useEffect(() => {
     heading.current?.focus();
   }, [
     view,
@@ -93,9 +128,10 @@ export function LearningApp() {
 
   function commit(next: AppState) {
     if (conflict) return;
-    const success = saveProgress(browserStorage, next);
+    const success = saveProgress(browserStorage, next, writesBlocked.current);
     setSaved(success);
-    if (!success)
+    setStorageAvailable(success);
+    if (!success && !writesBlocked.current)
       setNotice(
         "Chưa lưu được tiến độ. Hãy nhờ người nhà kiểm tra dung lượng và quyền lưu của trình duyệt trước khi đóng trang.",
       );
@@ -106,6 +142,8 @@ export function LearningApp() {
     stopAudio();
     setAudioNotice("");
     setView(next);
+    if (window.location.hash !== `#${next}`)
+      window.history.pushState(null, "", `#${next}`);
     setRevealed(false);
     setFeedback("");
   }
@@ -147,6 +185,7 @@ export function LearningApp() {
         : "Không sao đâu bạn. Mình sẽ gặp lại từ này và ôn tiếp vào ngày mai.",
     );
     setRevealed(false);
+    setAudioNotice("");
     stopAudio();
   }
 
@@ -204,6 +243,7 @@ export function LearningApp() {
                 onStart={() => begin()}
                 onReview={() => go("review")}
                 onHelp={() => go("help")}
+                storageAvailable={storageAvailable}
               />
             )}
             {view === "review" && (
@@ -234,12 +274,16 @@ export function LearningApp() {
                   commit(finishSession(state));
                   go("home");
                 }}
-                onContinue={() => setFeedback("")}
+                onContinue={() => {
+                  setFeedback("");
+                  setAudioNotice("");
+                }}
                 onReveal={() => setRevealed(true)}
                 onRecall={recall}
                 onPractice={() => {
                   commit(finishPractice(state));
                   setRevealed(false);
+                  setAudioNotice("");
                   stopAudio();
                 }}
                 onPlay={play}

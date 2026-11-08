@@ -1,5 +1,15 @@
 # Implementation progress
 
+## Full user journey audit — November 8, 2026
+
+- [x] Read the current implementation/data reports; audit first use, same-day return, next-day return, interruption, every review route, citizenship practice, and edge cases in Chrome.
+- [x] Fix eight verified findings: backup-failure data loss, browser history, paused-lesson resume wording, false saving claims, mobile start visibility, small controls/guidance, stale audio errors, and vocabulary-total contrast. See UX_AUDIT.md for severity/root causes/evidence.
+- [x] Preserve all 152 vocabulary IDs/readings/meanings, official USCIS content, browser progress schema, review scheduling, and English audio; add seven unit/render regressions and a reusable browser journey driver.
+- [x] Pass 109 tests, data validation, lint, type checking, and production build; verify mobile browser flows and Lighthouse home accessibility 100. Keep screenshots and structured evidence in audit-evidence/.
+- [ ] Validate independent use, voice intelligibility, and accessibility with the learner on their own phone; scripted success does not replace a participant trial.
+
+The current audit supersedes earlier test counts below. Existing curriculum/device limits and ranked recommendations are recorded in UX_AUDIT.md.
+
 ## Remove ending-sound guidance from learner vocabulary cards
 
 - [x] Show supplied Vietnamese phonetic readings verbatim with English, meaning, and audio; remove ending tips, ending labels/highlights, pronunciation labels, and parenthesis help text.
@@ -154,7 +164,8 @@ Current rule: pronunciation assistance is always visible in vocabulary review; o
 
 ## Future work — outside MVP
 
-- [ ] Independently audit the supplied 2025 questions/translations against USCIS, and add verified answers and the missing 2008 bank.
+- [x] Validate the complete supplied 2025 English question/answer bank against the pinned official source; preserve all answers and versioned mappings.
+- [ ] Have a qualified Vietnamese reviewer validate existing translations/readings; add a verified 2008 bank only under a separate content brief.
 - [ ] Validate speech and usability with the learner on their own phone; device voices vary.
 - [ ] Optional progress export/import and cross-device synchronization.
 - [x] Recorded-audio preference and browser-speech fallback.

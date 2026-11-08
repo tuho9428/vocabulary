@@ -173,7 +173,7 @@ export function isLegacyState(
 export function loadProgress(
   storage: StorageAdapter,
   items: readonly StudyItem[],
-): { state: AppState; notice: string } {
+): { state: AppState; notice: string; writeBlocked?: true } {
   try {
     const raw = storage.getItem(STORAGE_KEY);
     if (raw === null) return { state: initialState(), notice: "" };
@@ -193,6 +193,7 @@ export function loadProgress(
       } catch {
         return {
           state,
+          writeBlocked: true,
           notice:
             "Đã đọc tiến độ cũ nhưng chưa tạo được bản sao nâng cấp. Dữ liệu gốc vẫn còn; hãy kiểm tra quyền lưu trước khi đóng trang.",
         };
@@ -205,7 +206,16 @@ export function loadProgress(
           : "Đã đọc tiến độ cũ nhưng chưa lưu được bản nâng cấp. Đừng đóng trang trước khi kiểm tra quyền lưu của trình duyệt.",
       };
     }
-    storage.setItem(BACKUP_KEY, raw);
+    try {
+      storage.setItem(BACKUP_KEY, raw);
+    } catch {
+      return {
+        state: initialState(),
+        writeBlocked: true,
+        notice:
+          "Chưa tạo được bản sao tiến độ cũ. Dữ liệu gốc được giữ nguyên. Bạn có thể học tạm, nhưng lượt học này chưa được lưu. Hãy kiểm tra quyền lưu rồi tải lại trang.",
+      };
+    }
     return {
       state: initialState(),
       notice:
@@ -214,6 +224,7 @@ export function loadProgress(
   } catch {
     return {
       state: initialState(),
+      writeBlocked: true,
       notice:
         "Trình duyệt không cho phép lưu dữ liệu. Bài học vẫn dùng được, nhưng tiến độ có thể mất khi đóng trang.",
     };
@@ -223,7 +234,10 @@ export function loadProgress(
 export function saveProgress(
   storage: StorageAdapter,
   state: AppState,
+  writeBlocked = false,
 ): boolean {
+  // Never replace recoverable source data when its backup could not be saved.
+  if (writeBlocked) return false;
   try {
     storage.setItem(STORAGE_KEY, JSON.stringify(state));
     return true;

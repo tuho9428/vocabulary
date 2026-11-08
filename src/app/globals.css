@@ -244,8 +244,8 @@ h3 {
   margin-left: auto;
   background: transparent;
   color: var(--muted);
-  font-size: 14px;
-  min-height: 48px;
+  font-size: 18px;
+  min-height: 56px;
   padding: 8px;
   border-radius: 8px;
 }
@@ -409,7 +409,7 @@ h3 {
 }
 .save-note {
   color: #5b6f5d;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   margin-top: 13px;
 }
@@ -445,7 +445,7 @@ h3 {
 }
 .learned-number span {
   font-size: 22px;
-  color: #7a8579;
+  color: var(--muted);
   margin-left: 10px;
   letter-spacing: 0;
 }
@@ -574,9 +574,9 @@ progress::-moz-progress-bar {
 .help-link {
   color: var(--green);
   background: none;
-  font-size: 14px;
+  font-size: 18px;
   padding: 12px 0 12px 12px;
-  min-height: 48px;
+  min-height: 56px;
   border-radius: 6px;
   margin-left: auto;
 }
@@ -792,7 +792,7 @@ progress::-moz-progress-bar {
   font-size: 20px;
 }
 .field-help {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--muted);
   margin-top: 10px;
 }
@@ -909,7 +909,7 @@ progress::-moz-progress-bar {
     letter-spacing: 1.5px;
   }
   .family-link {
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px 0 8px 8px;
     max-width: 120px;
     text-align: left;
@@ -917,7 +917,7 @@ progress::-moz-progress-bar {
     line-height: 1.5;
   }
   .main-content {
-    padding: 32px 22px;
+    padding: 20px 16px;
   }
   .date-label {
     position: static;
@@ -929,7 +929,7 @@ progress::-moz-progress-bar {
   .welcome-row {
     flex-direction: column;
     gap: 0;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
   .welcome-row h1 {
     font-size: 30px;
@@ -948,11 +948,12 @@ progress::-moz-progress-bar {
     gap: 22px;
   }
   .daily-card {
-    padding: 25px 23px 20px;
+    padding: 20px 16px;
     border-radius: 16px;
   }
   .daily-card h2 {
-    font-size: 32px;
+    font-size: 28px;
+    margin: 16px 0 12px;
   }
   .card-description {
     font-size: 20px;
@@ -965,8 +966,8 @@ progress::-moz-progress-bar {
     font-size: 11px;
   }
   .lesson-counts {
-    gap: 22px;
-    margin: 29px 0;
+    gap: 16px;
+    margin: 16px 0;
   }
   .lesson-counts > div {
     display: flex;
@@ -986,7 +987,7 @@ progress::-moz-progress-bar {
     font-size: 24px;
   }
   .save-note {
-    font-size: 13px;
+    font-size: 16px;
   }
   .journey-card {
     padding: 26px;
@@ -1082,10 +1083,11 @@ progress::-moz-progress-bar {
     font-size: 42px;
   }
   .study-heading .eyebrow {
-    font-size: 10px;
+    font-size: 16px;
   }
   .study-heading {
-    font-size: 14px;
+    font-size: 18px;
+    flex-wrap: wrap;
   }
   .recall-buttons {
     gap: 10px;
@@ -1098,6 +1100,17 @@ progress::-moz-progress-bar {
   .settings-card h1 {
     font-size: 30px;
   }
+}
+@media (max-width: 400px) {
+  .site-header { padding: 12px 16px; }
+  .brand { gap: 8px; }
+  .brand-name { font-size: 20px; }
+  .brand-subtitle { letter-spacing: 0.5px; }
+  .book-mark { width: 36px; height: 36px; }
+  .family-link { max-width: 105px; }
+  .welcome-row .intro { font-size: 19px; }
+  .welcome-row h1 { margin: 8px 0; }
+  .section-top > .quiet { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *,

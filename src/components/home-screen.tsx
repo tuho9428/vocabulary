@@ -10,6 +10,7 @@ export function HomeScreen({
   onStart,
   onReview,
   onHelp,
+  storageAvailable = true,
 }: {
   state: AppState;
   bank: StudyItem[];
@@ -18,11 +19,12 @@ export function HomeScreen({
   onStart: () => void;
   onReview: () => void;
   onHelp: () => void;
+  storageAvailable?: boolean;
 }) {
   const plan = dailyPlan(state, bank, today);
   const learned = bank.filter((item) => state.progress[item.id]);
   const countToday = learnedToday(state, bank, today);
-  const unfinished = !!state.session && state.session.phase !== "complete";
+  const unfinished = (!!state.session && state.session.phase !== "complete") || !!state.pausedSession;
   const dateLabel = new Intl.DateTimeFormat("vi-VN", {
     weekday: "long",
     day: "numeric",
@@ -65,7 +67,7 @@ export function HomeScreen({
           <h2 id="daily-title">
             {unfinished
               ? "Mình học tiếp, bạn nhé."
-              : "Một chút hôm nay,\nmột bước tiến mới."}
+              : "Bài học hôm nay"}
           </h2>
           <p className="card-description">
             {unfinished
@@ -95,7 +97,9 @@ export function HomeScreen({
             Ôn lại
           </button>
           <p className="save-note">
-            <span aria-hidden="true">✓</span> Tiến độ tự lưu trên thiết bị này
+            {storageAvailable
+              ? "✓ Tiến độ tự lưu trên thiết bị này"
+              : "Chưa lưu được tiến độ trên thiết bị này"}
           </p>
         </section>
         <aside className="journey-card" aria-labelledby="journey-title">
@@ -123,7 +127,7 @@ export function HomeScreen({
           <p className="journey-encouragement">
             <strong>{countToday} từ mới hôm nay.</strong>
             <br />
-            Ba từ là gợi ý, không phải giới hạn. Mỗi lần ôn lại giúp bạn nhớ lâu
+            Số từ mới là gợi ý, không phải giới hạn. Mỗi lần ôn lại giúp bạn nhớ lâu
             hơn.
           </p>
           <div className="bank-label">

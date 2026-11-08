@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-08",
+  "timezone": "America/Los_Angeles",
+  "method": "Chrome DevTools interactions and evaluated DOM assertions; isolated test profiles",
+  "stages": [
+    {
+      "stage": "interrupt",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"interrupt\",\"cursor\":1,\"learned\":1,\"nextReview\":\"2026-11-09\"}\n```\nPage navigated to http://localhost:3000/#lesson."
+    },
+    {
+      "stage": "finish-first",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"finish-first\",\"learned\":3,\"answers\":[[\"Republic\"],[\"Executive branch\"],[\"It says America is free from British control.\"]]}\n```"
+    },
+    {
+      "stage": "finish-first",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"finish-first\",\"learned\":3,\"answers\":[[\"Republic\"],[\"Executive branch\"],[\"It says America is free from British control.\"]]}\n```"
+    },
+    {
+      "stage": "early-review",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"early-review\",\"learned\":3,\"schedulesPreserved\":true}\n```"
+    },
+    {
+      "stage": "paused-extra",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"paused-extra\",\"learned\":6,\"resumedCursor\":1,\"queue\":[{\"id\":\"question-words-when\",\"kind\":\"new\"},{\"id\":\"question-words-where\",\"kind\":\"new\"},{\"id\":\"question-words-how\",\"kind\":\"new\"}]}\n```\nPage navigated to http://localhost:3000/#home."
+    },
+    {
+      "stage": "audio-failure",
+      "text": "Script ran on page and returned:\n```json\n{\"stage\":\"audio-failure\",\"failureShown\":true,\"clearedOnNextCard\":true}\n```\nPage navigated to http://localhost:3000/#lesson."
+    }
+  ],
+  "observations": {
+    "nextDay": {
+      "simulatedDate": "2026-11-09",
+      "reviews": 6,
+      "newWords": 1,
+      "successfulDue": "2026-11-12",
+      "forgottenDue": "2026-11-10",
+      "learnedAfter": 7
+    },
+    "reviewRefresh": {
+      "cursor": 1,
+      "pausedLessonCursor": 1,
+      "meaningHidden": true,
+      "reading": "Hu"
+    },
+    "exhaustion": {
+      "learned": 152,
+      "phase": "complete",
+      "extraDisabled": true
+    },
+    "overdue": {
+      "learned": 152,
+      "reviewQueue": 152,
+      "newWords": 0
+    },
+    "multiAnswer": {
+      "question": 10,
+      "recommended": [
+        "Equality",
+        "Liberty"
+      ],
+      "otherAnswers": 4
+    },
+    "dynamic": {
+      "question": 30,
+      "action": "Bỏ qua",
+      "vocabularyProgressUnchanged": true,
+      "historyUnchanged": true
+    },
+    "recordedAudio": {
+      "path": "/audio/civics/en/Q33en.mp3",
+      "playingTimeSeconds": 0.328103,
+      "rate": 0.75,
+      "stoppedOnNavigation": true
+    },
+    "storage": {
+      "backupFailureOriginalPreserved": true,
+      "normalCorruptionBackedUp": true,
+      "freshLessonSaveAfterRecovery": true,
+      "blockedGetterWarning": true,
+      "blockedGetterFalseSavePromise": false
+    },
+    "mobile": {
+      "width": 320,
+      "height": 740,
+      "startTop": 641.3,
+      "startBottom": 711.3,
+      "horizontalOverflow": false,
+      "primaryHeight": 70,
+      "reviewHeight": 62,
+      "helpHeight": 56
+    },
+    "lighthouse": {
+      "mode": "snapshot",
+      "homeAccessibilityBeforeContrastFix": 96,
+      "homeAccessibilityAfter": 100,
+      "homeFailedAuditsAfter": 0
+    },
+    "navigation": {
+      "backForwardPreserveProgress": true,
+      "reloadWord": "who",
+      "reloadCursor": 1,
+      "skipLinkPreservesScreen": true
+    },
+    "settings": {
+      "widthsChecked": [
+        320,
+        390,
+        1280
+      ],
+      "horizontalOverflow": false,
+      "selectHeight": 60,
+      "selectFont": 20,
+      "versionChangeDisabledDuringLesson": true
+    }
+  }
+}
