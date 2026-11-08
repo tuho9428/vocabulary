@@ -1,0 +1,34 @@
+{
+  "name": "cung-ong-hoc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "npm run sync:audio",
+    "prebuild": "npm run sync:audio",
+    "pretest": "npm run sync:audio",
+    "sync:audio": "node --experimental-strip-types scripts/sync-audio.ts",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts src/data/*.test.js",
+    "validate:data": "node --experimental-strip-types scripts/validate-data.ts"
+  },
+  "dependencies": {
+    "next": "^16.4.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.4.5",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "english": "citizen",
+    "vietnamese": "công dân",
+    "pronunciation": "/ˈsɪtɪzən/",
+    "question": "I am a citizen. What does citizen mean?",
+    "answer": "A member of a country.",
+    "explanation": "Citizen nghĩa là công dân — một người là thành viên của một quốc gia."
+  },
+  {
+    "english": "vote",
+    "vietnamese": "bỏ phiếu",
+    "pronunciation": "/voʊt/",
+    "question": "Complete the sentence: Citizens can …",
+    "answer": "Citizens can vote.",
+    "explanation": "Vote nghĩa là bỏ phiếu, chẳng hạn để lựa chọn người đại diện."
+  },
+  {
+    "english": "law",
+    "vietnamese": "luật pháp",
+    "pronunciation": "/lɔː/",
+    "question": "Complete the sentence: We follow the …",
+    "answer": "We follow the law.",
+    "explanation": "Law nghĩa là luật pháp. Follow the law nghĩa là tuân theo luật pháp."
+  },
+  {
+    "english": "country",
+    "vietnamese": "đất nước",
+    "pronunciation": "/ˈkʌntri/",
+    "question": "What does the word country mean?",
+    "answer": "A nation.",
+    "explanation": "Country nghĩa là đất nước hoặc quốc gia."
+  },
+  {
+    "english": "government",
+    "vietnamese": "chính phủ",
+    "pronunciation": "/ˈɡʌvərnmənt/",
+    "question": "Which word means chính phủ?",
+    "answer": "Government.",
+    "explanation": "Government là chính phủ, cơ quan điều hành công việc của một quốc gia."
+  },
+  {
+    "english": "right",
+    "vietnamese": "quyền",
+    "pronunciation": "/raɪt/",
+    "question": "In the phrase a right to vote, what does right mean?",
+    "answer": "Something a person is allowed to do.",
+    "explanation": "Trong cụm a right to vote, right nghĩa là quyền. Right cũng có nghĩa khác tùy ngữ cảnh."
+  },
+  {
+    "english": "freedom",
+    "vietnamese": "sự tự do",
+    "pronunciation": "/ˈfriːdəm/",
+    "question": "Which word means sự tự do?",
+    "answer": "Freedom.",
+    "explanation": "Freedom nghĩa là sự tự do. Hãy nghe và đọc chậm từng âm."
+  },
+  {
+    "english": "president",
+    "vietnamese": "tổng thống",
+    "pronunciation": "/ˈprezɪdənt/",
+    "question": "Which English word means tổng thống?",
+    "answer": "President.",
+    "explanation": "President nghĩa là tổng thống trong ngữ cảnh chính phủ Hoa Kỳ."
+  },
+  {
+    "english": "state",
+    "vietnamese": "tiểu bang",
+    "pronunciation": "/steɪt/",
+    "question": "In the phrase a U.S. state, what does state mean?",
+    "answer": "A part of the United States.",
+    "explanation": "Trong ngữ cảnh này, state là tiểu bang, chẳng hạn California."
+  },
+  {
+    "english": "flag",
+    "vietnamese": "lá cờ",
+    "pronunciation": "/flæɡ/",
+    "question": "Which English word means lá cờ?",
+    "answer": "Flag.",
+    "explanation": "Flag nghĩa là lá cờ, một biểu tượng của đất nước."
+  },
+  {
+    "english": "people",
+    "vietnamese": "người dân",
+    "pronunciation": "/ˈpiːpəl/",
+    "question": "Which word means người dân?",
+    "answer": "People.",
+    "explanation": "People nghĩa là những người hoặc người dân. Đây là từ chỉ nhiều người."
+  },
+  {
+    "english": "history",
+    "vietnamese": "lịch sử",
+    "pronunciation": "/ˈhɪstəri/",
+    "question": "Which word means lịch sử?",
+    "answer": "History.",
+    "explanation": "History nghĩa là lịch sử, những việc đã xảy ra trong quá khứ."
+  }
+]

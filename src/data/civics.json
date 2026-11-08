@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "q001",
+    "number": 1,
+    "question": {
+      "en": "What is the supreme law of the land?",
+      "vi": "Luật tối cao của quốc gia là gì?"
+    },
+    "answer": {
+      "en": "The Constitution.",
+      "vi": "Hiến pháp."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q1en.mp3",
+        "vi": "/audio/civics/vi/Q1vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A1en.mp3",
+        "vi": "/audio/civics/vi/A1vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q002",
+    "number": 2,
+    "question": {
+      "en": "What does the Constitution do?",
+      "vi": "Hiến pháp làm gì?"
+    },
+    "answer": {
+      "en": "Sets up the government; defines the government; protects basic rights of Americans.",
+      "vi": "Thiết lập chính phủ; định nghĩa chính phủ; bảo vệ các quyền cơ bản của người Mỹ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q2en.mp3",
+        "vi": "/audio/civics/vi/Q2vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A2en.mp3",
+        "vi": "/audio/civics/vi/A2vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q003",
+    "number": 3,
+    "question": {
+      "en": "The idea of self-government is in the first three words of the Constitution. What are these words?",
+      "vi": "Ý tưởng tự quản nằm trong ba từ đầu tiên của Hiến pháp. Ba từ đó là gì?"
+    },
+    "answer": {
+      "en": "We the People.",
+      "vi": "We the People."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q3en.mp3",
+        "vi": "/audio/civics/vi/Q3vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A3en.mp3",
+        "vi": "/audio/civics/vi/A3vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q004",
+    "number": 4,
+    "question": {
+      "en": "What is an amendment?",
+      "vi": "Tu chính án là gì?"
+    },
+    "answer": {
+      "en": "A change to the Constitution.",
+      "vi": "Một thay đổi đối với Hiến pháp."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q4en.mp3",
+        "vi": "/audio/civics/vi/Q4vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A4en.mp3",
+        "vi": "/audio/civics/vi/A4vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q005",
+    "number": 5,
+    "question": {
+      "en": "What do we call the first ten amendments to the Constitution?",
+      "vi": "Mười tu chính án đầu tiên của Hiến pháp được gọi là gì?"
+    },
+    "answer": {
+      "en": "The Bill of Rights.",
+      "vi": "Tuyên ngôn Nhân quyền."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q5en.mp3",
+        "vi": "/audio/civics/vi/Q5vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A5en.mp3",
+        "vi": "/audio/civics/vi/A5vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q006",
+    "number": 6,
+    "question": {
+      "en": "What is one right or freedom from the First Amendment?",
+      "vi": "Một quyền hoặc tự do trong Tu chính án thứ nhất là gì?"
+    },
+    "answer": {
+      "en": "Speech; religion; assembly; press; petition the government.",
+      "vi": "Tự do ngôn luận; tôn giáo; hội họp; báo chí; kiến nghị chính phủ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q6en.mp3",
+        "vi": "/audio/civics/vi/Q6vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A6en.mp3",
+        "vi": "/audio/civics/vi/A6vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q007",
+    "number": 7,
+    "question": {
+      "en": "How many amendments does the Constitution have?",
+      "vi": "Hiến pháp có bao nhiêu tu chính án?"
+    },
+    "answer": {
+      "en": "27.",
+      "vi": "27."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q7en.mp3",
+        "vi": "/audio/civics/vi/Q7vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A7en.mp3",
+        "vi": "/audio/civics/vi/A7vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q008",
+    "number": 8,
+    "question": {
+      "en": "What did the Declaration of Independence do?",
+      "vi": "Tuyên ngôn Độc lập đã làm gì?"
+    },
+    "answer": {
+      "en": "Announced independence from Great Britain.",
+      "vi": "Tuyên bố độc lập khỏi Anh."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q8en.mp3",
+        "vi": "/audio/civics/vi/Q8vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A8en.mp3",
+        "vi": "/audio/civics/vi/A8vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q009",
+    "number": 9,
+    "question": {
+      "en": "What are two rights in the Declaration of Independence?",
+      "vi": "Hai quyền trong Tuyên ngôn Độc lập là gì?"
+    },
+    "answer": {
+      "en": "Life and liberty.",
+      "vi": "Quyền sống và tự do."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q9en.mp3",
+        "vi": "/audio/civics/vi/Q9vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A9en.mp3",
+        "vi": "/audio/civics/vi/A9vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q010",
+    "number": 10,
+    "question": {
+      "en": "What is freedom of religion?",
+      "vi": "Tự do tôn giáo là gì?"
+    },
+    "answer": {
+      "en": "You can practice any religion, or not practice a religion.",
+      "vi": "Bạn có thể theo hoặc không theo tôn giáo nào."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q10en.mp3",
+        "vi": "/audio/civics/vi/Q10vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A10en.mp3",
+        "vi": "/audio/civics/vi/A10vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q011",
+    "number": 11,
+    "question": {
+      "en": "What is the economic system in the United States?",
+      "vi": "Hệ thống kinh tế ở Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Capitalist economy; market economy.",
+      "vi": "Kinh tế tư bản; kinh tế thị trường."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q11en.mp3",
+        "vi": "/audio/civics/vi/Q11vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A11en.mp3",
+        "vi": "/audio/civics/vi/A11vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q012",
+    "number": 12,
+    "question": {
+      "en": "What is the rule of law?",
+      "vi": "Pháp quyền là gì?"
+    },
+    "answer": {
+      "en": "Everyone must follow the law.",
+      "vi": "Mọi người phải tuân theo pháp luật."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q12en.mp3",
+        "vi": "/audio/civics/vi/Q12vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A12en.mp3",
+        "vi": "/audio/civics/vi/A12vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q013",
+    "number": 13,
+    "question": {
+      "en": "Name one branch or part of the government.",
+      "vi": "Kể tên một nhánh của chính phủ."
+    },
+    "answer": {
+      "en": "Congress; legislative; President; executive; courts; judicial.",
+      "vi": "Quốc hội; lập pháp; Tổng thống; hành pháp; tòa án; tư pháp."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q13en.mp3",
+        "vi": "/audio/civics/vi/Q13vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A13en.mp3",
+        "vi": "/audio/civics/vi/A13vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q014",
+    "number": 14,
+    "question": {
+      "en": "What stops one branch of government from becoming too powerful?",
+      "vi": "Điều gì ngăn một nhánh chính phủ trở nên quá quyền lực?"
+    },
+    "answer": {
+      "en": "Checks and balances; separation of powers.",
+      "vi": "Kiểm tra và cân bằng; phân chia quyền lực."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q14en.mp3",
+        "vi": "/audio/civics/vi/Q14vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A14en.mp3",
+        "vi": "/audio/civics/vi/A14vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q015",
+    "number": 15,
+    "question": {
+      "en": "Who is in charge of the executive branch?",
+      "vi": "Ai phụ trách nhánh hành pháp?"
+    },
+    "answer": {
+      "en": "The President.",
+      "vi": "Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q15en.mp3",
+        "vi": "/audio/civics/vi/Q15vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A15en.mp3",
+        "vi": "/audio/civics/vi/A15vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q016",
+    "number": 16,
+    "question": {
+      "en": "Who makes federal laws?",
+      "vi": "Ai làm luật liên bang?"
+    },
+    "answer": {
+      "en": "Congress.",
+      "vi": "Quốc hội."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q16en.mp3",
+        "vi": "/audio/civics/vi/Q16vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A16en.mp3",
+        "vi": "/audio/civics/vi/A16vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q017",
+    "number": 17,
+    "question": {
+      "en": "What are the two parts of the U.S. Congress?",
+      "vi": "Hai phần của Quốc hội Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "The Senate and House of Representatives.",
+      "vi": "Thượng viện và Hạ viện."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q17en.mp3",
+        "vi": "/audio/civics/vi/Q17vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A17en.mp3",
+        "vi": "/audio/civics/vi/A17vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q018",
+    "number": 18,
+    "question": {
+      "en": "How many U.S. Senators are there?",
+      "vi": "Có bao nhiêu Thượng nghị sĩ Hoa Kỳ?"
+    },
+    "answer": {
+      "en": "100.",
+      "vi": "100."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q18en.mp3",
+        "vi": "/audio/civics/vi/Q18vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A18en.mp3",
+        "vi": "/audio/civics/vi/A18vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q019",
+    "number": 19,
+    "question": {
+      "en": "We elect a U.S. Senator for how many years?",
+      "vi": "Chúng ta bầu Thượng nghị sĩ Hoa Kỳ cho bao nhiêu năm?"
+    },
+    "answer": {
+      "en": "Six.",
+      "vi": "Sáu năm."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q19en.mp3",
+        "vi": "/audio/civics/vi/Q19vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A19en.mp3",
+        "vi": "/audio/civics/vi/A19vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q020",
+    "number": 20,
+    "question": {
+      "en": "Who is one of your state’s U.S. Senators now?",
+      "vi": "Một trong các Thượng nghị sĩ Hoa Kỳ của tiểu bang bạn hiện nay là ai?"
+    },
+    "answer": {
+      "en": "Patty Murray (Answers vary by state/year.)",
+      "vi": "Patty Murray (Câu trả lời tùy theo tiểu bang/năm.)"
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q20en.mp3",
+        "vi": "/audio/civics/vi/Q20vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A20en.mp3",
+        "vi": "/audio/civics/vi/A20vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q021",
+    "number": 21,
+    "question": {
+      "en": "The House of Representatives has how many voting members?",
+      "vi": "Hạ viện có bao nhiêu thành viên bỏ phiếu?"
+    },
+    "answer": {
+      "en": "435.",
+      "vi": "435."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q21en.mp3",
+        "vi": "/audio/civics/vi/Q21vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A21en.mp3",
+        "vi": "/audio/civics/vi/A21vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q022",
+    "number": 22,
+    "question": {
+      "en": "We elect a U.S. Representative for how many years?",
+      "vi": "Chúng ta bầu Dân biểu Hoa Kỳ cho bao nhiêu năm?"
+    },
+    "answer": {
+      "en": "Two.",
+      "vi": "Hai năm."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q22en.mp3",
+        "vi": "/audio/civics/vi/Q22vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A22en.mp3",
+        "vi": "/audio/civics/vi/A22vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q023",
+    "number": 23,
+    "question": {
+      "en": "Name your U.S. Representative.",
+      "vi": "Kể tên Dân biểu Hoa Kỳ của bạn."
+    },
+    "answer": {
+      "en": "Adam Smith (Answers vary by district/year.)",
+      "vi": "Adam Smith (Câu trả lời tùy nơi ở/năm.)"
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q23en.mp3",
+        "vi": "/audio/civics/vi/Q23vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A23en.mp3",
+        "vi": "/audio/civics/vi/A23vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q024",
+    "number": 24,
+    "question": {
+      "en": "Who does a U.S. Senator represent?",
+      "vi": "Thượng nghị sĩ Hoa Kỳ đại diện cho ai?"
+    },
+    "answer": {
+      "en": "All people of the state.",
+      "vi": "Tất cả người dân trong tiểu bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q24en.mp3",
+        "vi": "/audio/civics/vi/Q24vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A24en.mp3",
+        "vi": "/audio/civics/vi/A24vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q025",
+    "number": 25,
+    "question": {
+      "en": "Why do some states have more Representatives than other states?",
+      "vi": "Tại sao một số tiểu bang có nhiều Dân biểu hơn?"
+    },
+    "answer": {
+      "en": "Because of the state's population.",
+      "vi": "Vì dân số của tiểu bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q25en.mp3",
+        "vi": "/audio/civics/vi/Q25vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A25en.mp3",
+        "vi": "/audio/civics/vi/A25vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q026",
+    "number": 26,
+    "question": {
+      "en": "We elect a President for how many years?",
+      "vi": "Chúng ta bầu Tổng thống cho bao nhiêu năm?"
+    },
+    "answer": {
+      "en": "Four.",
+      "vi": "Bốn năm."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q26en.mp3",
+        "vi": "/audio/civics/vi/Q26vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A26en.mp3",
+        "vi": "/audio/civics/vi/A26vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q027",
+    "number": 27,
+    "question": {
+      "en": "In what month do we vote for President?",
+      "vi": "Chúng ta bầu Tổng thống vào tháng nào?"
+    },
+    "answer": {
+      "en": "November.",
+      "vi": "Tháng 11."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q27en.mp3",
+        "vi": "/audio/civics/vi/Q27vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A27en.mp3",
+        "vi": "/audio/civics/vi/A27vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q028",
+    "number": 28,
+    "question": {
+      "en": "What is the name of the President of the United States now?",
+      "vi": "Tên Tổng thống Hoa Kỳ hiện nay là gì?"
+    },
+    "answer": {
+      "en": "Donald Trump (Depends on current year.)",
+      "vi": "Donald Trump (Tùy theo năm hiện tại.)"
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q28en.mp3",
+        "vi": "/audio/civics/vi/Q28vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A28en.mp3",
+        "vi": "/audio/civics/vi/A28vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q029",
+    "number": 29,
+    "question": {
+      "en": "What is the name of the Vice President of the United States now?",
+      "vi": "Tên Phó Tổng thống Hoa Kỳ hiện nay là gì?"
+    },
+    "answer": {
+      "en": "JD Vance (Depends on current year.)",
+      "vi": "JD Vance (Tùy theo năm hiện tại.)"
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q29en.mp3",
+        "vi": "/audio/civics/vi/Q29vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A29en.mp3",
+        "vi": "/audio/civics/vi/A29vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q030",
+    "number": 30,
+    "question": {
+      "en": "If the President can no longer serve, who becomes President?",
+      "vi": "Nếu Tổng thống không thể phục vụ nữa, ai trở thành Tổng thống?"
+    },
+    "answer": {
+      "en": "The Vice President.",
+      "vi": "Phó Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q30en.mp3",
+        "vi": "/audio/civics/vi/Q30vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A30en.mp3",
+        "vi": "/audio/civics/vi/A30vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q031",
+    "number": 31,
+    "question": {
+      "en": "If both the President and the Vice President can no longer serve, who becomes President?",
+      "vi": "Nếu cả Tổng thống và Phó Tổng thống không thể phục vụ, ai trở thành Tổng thống?"
+    },
+    "answer": {
+      "en": "The Speaker of the House.",
+      "vi": "Chủ tịch Hạ viện."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q31en.mp3",
+        "vi": "/audio/civics/vi/Q31vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A31en.mp3",
+        "vi": "/audio/civics/vi/A31vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q032",
+    "number": 32,
+    "question": {
+      "en": "Who is the Commander in Chief of the military?",
+      "vi": "Ai là Tổng tư lệnh quân đội?"
+    },
+    "answer": {
+      "en": "The President.",
+      "vi": "Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q32en.mp3",
+        "vi": "/audio/civics/vi/Q32vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A32en.mp3",
+        "vi": "/audio/civics/vi/A32vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q033",
+    "number": 33,
+    "question": {
+      "en": "Who signs bills to become laws?",
+      "vi": "Ai ký dự luật để trở thành luật?"
+    },
+    "answer": {
+      "en": "The President.",
+      "vi": "Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q33en.mp3",
+        "vi": "/audio/civics/vi/Q33vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A33en.mp3",
+        "vi": "/audio/civics/vi/A33vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q034",
+    "number": 34,
+    "question": {
+      "en": "Who vetoes bills?",
+      "vi": "Ai phủ quyết dự luật?"
+    },
+    "answer": {
+      "en": "The President.",
+      "vi": "Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q34en.mp3",
+        "vi": "/audio/civics/vi/Q34vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A34en.mp3",
+        "vi": "/audio/civics/vi/A34vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q035",
+    "number": 35,
+    "question": {
+      "en": "What does the President’s Cabinet do?",
+      "vi": "Nội các của Tổng thống làm gì?"
+    },
+    "answer": {
+      "en": "Advises the President.",
+      "vi": "Cố vấn cho Tổng thống."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q35en.mp3",
+        "vi": "/audio/civics/vi/Q35vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A35en.mp3",
+        "vi": "/audio/civics/vi/A35vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q036",
+    "number": 36,
+    "question": {
+      "en": "What are two Cabinet-level positions?",
+      "vi": "Hai chức vụ cấp Nội các là gì?"
+    },
+    "answer": {
+      "en": "Secretary of State; Secretary of Defense.",
+      "vi": "Bộ trưởng Ngoại giao; Bộ trưởng Quốc phòng."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q36en.mp3",
+        "vi": "/audio/civics/vi/Q36vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A36en.mp3",
+        "vi": "/audio/civics/vi/A36vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q037",
+    "number": 37,
+    "question": {
+      "en": "What does the judicial branch do?",
+      "vi": "Nhánh tư pháp làm gì?"
+    },
+    "answer": {
+      "en": "Reviews laws; explains laws.",
+      "vi": "Xem xét luật; giải thích luật."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q37en.mp3",
+        "vi": "/audio/civics/vi/Q37vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A37en.mp3",
+        "vi": "/audio/civics/vi/A37vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q038",
+    "number": 38,
+    "question": {
+      "en": "What is the highest court in the United States?",
+      "vi": "Tòa án cao nhất ở Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "The Supreme Court.",
+      "vi": "Tòa án Tối cao."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q38en.mp3",
+        "vi": "/audio/civics/vi/Q38vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A38en.mp3",
+        "vi": "/audio/civics/vi/A38vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q039",
+    "number": 39,
+    "question": {
+      "en": "How many justices are on the Supreme Court?",
+      "vi": "Có bao nhiêu thẩm phán trong Tòa án Tối cao?"
+    },
+    "answer": {
+      "en": "Nine.",
+      "vi": "Chín."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q39en.mp3",
+        "vi": "/audio/civics/vi/Q39vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A39en.mp3",
+        "vi": "/audio/civics/vi/A39vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q040",
+    "number": 40,
+    "question": {
+      "en": "Who is the Chief Justice of the United States now?",
+      "vi": "Ai là Chánh án Tòa án Tối cao hiện nay?"
+    },
+    "answer": {
+      "en": "John Roberts.",
+      "vi": "John Roberts."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q40en.mp3",
+        "vi": "/audio/civics/vi/Q40vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A40en.mp3",
+        "vi": "/audio/civics/vi/A40vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q041",
+    "number": 41,
+    "question": {
+      "en": "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+      "vi": "Một quyền của chính phủ liên bang là gì?"
+    },
+    "answer": {
+      "en": "To print money; to declare war.",
+      "vi": "In tiền; tuyên chiến."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q41en.mp3",
+        "vi": "/audio/civics/vi/Q41vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A41en.mp3",
+        "vi": "/audio/civics/vi/A41vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q042",
+    "number": 42,
+    "question": {
+      "en": "Under our Constitution, some powers belong to the states. What is one power of the states?",
+      "vi": "Một quyền của tiểu bang là gì?"
+    },
+    "answer": {
+      "en": "Provide schooling and education.",
+      "vi": "Cung cấp giáo dục."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q42en.mp3",
+        "vi": "/audio/civics/vi/Q42vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A42en.mp3",
+        "vi": "/audio/civics/vi/A42vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q043",
+    "number": 43,
+    "question": {
+      "en": "Who is the Governor of your state now?",
+      "vi": "Thống đốc tiểu bang của bạn là ai?"
+    },
+    "answer": {
+      "en": "Answers vary by state.",
+      "vi": "Câu trả lời tùy tiểu bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q43en.mp3",
+        "vi": "/audio/civics/vi/Q43vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A43en.mp3",
+        "vi": "/audio/civics/vi/A43vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q044",
+    "number": 44,
+    "question": {
+      "en": "What is the capital of your state?",
+      "vi": "Thủ phủ tiểu bang của bạn là gì?"
+    },
+    "answer": {
+      "en": "Answers vary by state.",
+      "vi": "Câu trả lời tùy tiểu bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q44en.mp3",
+        "vi": "/audio/civics/vi/Q44vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A44en.mp3",
+        "vi": "/audio/civics/vi/A44vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q045",
+    "number": 45,
+    "question": {
+      "en": "What are the two major political parties in the United States?",
+      "vi": "Hai đảng chính trị lớn ở Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Democratic and Republican.",
+      "vi": "Dân chủ và Cộng hòa."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q45en.mp3",
+        "vi": "/audio/civics/vi/Q45vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A45en.mp3",
+        "vi": "/audio/civics/vi/A45vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q046",
+    "number": 46,
+    "question": {
+      "en": "What is the political party of the President now?",
+      "vi": "Đảng chính trị của Tổng thống hiện nay là gì?"
+    },
+    "answer": {
+      "en": "Depends on current year.",
+      "vi": "Tùy theo năm hiện tại."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q46en.mp3",
+        "vi": "/audio/civics/vi/Q46vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A46en.mp3",
+        "vi": "/audio/civics/vi/A46vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q047",
+    "number": 47,
+    "question": {
+      "en": "What is the name of the Speaker of the House of Representatives now?",
+      "vi": "Tên Chủ tịch Hạ viện hiện nay là gì?"
+    },
+    "answer": {
+      "en": "Depends on current year.",
+      "vi": "Tùy theo năm hiện tại."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q47en.mp3",
+        "vi": "/audio/civics/vi/Q47vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A47en.mp3",
+        "vi": "/audio/civics/vi/A47vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q048",
+    "number": 48,
+    "question": {
+      "en": "There are four amendments to the Constitution about who can vote. Describe one of them.",
+      "vi": "Có bốn tu chính án về quyền bầu cử. Hãy mô tả một."
+    },
+    "answer": {
+      "en": "Citizens 18 and older can vote.",
+      "vi": "Công dân từ 18 tuổi trở lên có thể bầu cử."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q48en.mp3",
+        "vi": "/audio/civics/vi/Q48vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A48en.mp3",
+        "vi": "/audio/civics/vi/A48vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q049",
+    "number": 49,
+    "question": {
+      "en": "What is one responsibility that is only for United States citizens?",
+      "vi": "Một trách nhiệm chỉ dành cho công dân Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Vote in a federal election.",
+      "vi": "Bầu cử liên bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q49en.mp3",
+        "vi": "/audio/civics/vi/Q49vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A49en.mp3",
+        "vi": "/audio/civics/vi/A49vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q050",
+    "number": 50,
+    "question": {
+      "en": "Name one right only for United States citizens.",
+      "vi": "Một quyền chỉ dành cho công dân Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Vote in a federal election.",
+      "vi": "Bầu cử liên bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q50en.mp3",
+        "vi": "/audio/civics/vi/Q50vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A50en.mp3",
+        "vi": "/audio/civics/vi/A50vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q051",
+    "number": 51,
+    "question": {
+      "en": "What are two rights of everyone living in the United States?",
+      "vi": "Hai quyền của mọi người sống tại Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Freedom of speech and freedom of religion.",
+      "vi": "Tự do ngôn luận và tự do tôn giáo."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q51en.mp3",
+        "vi": "/audio/civics/vi/Q51vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A51en.mp3",
+        "vi": "/audio/civics/vi/A51vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q052",
+    "number": 52,
+    "question": {
+      "en": "What do we show loyalty to when we say the Pledge of Allegiance?",
+      "vi": "Chúng ta thể hiện lòng trung thành với điều gì khi đọc Lời tuyên thệ trung thành?"
+    },
+    "answer": {
+      "en": "The United States and the flag.",
+      "vi": "Hoa Kỳ và lá cờ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q52en.mp3",
+        "vi": "/audio/civics/vi/Q52vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A52en.mp3",
+        "vi": "/audio/civics/vi/A52vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q053",
+    "number": 53,
+    "question": {
+      "en": "What is one promise you make when you become a United States citizen?",
+      "vi": "Một lời hứa khi trở thành công dân Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Obey the laws of the United States.",
+      "vi": "Tuân theo luật pháp Hoa Kỳ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q53en.mp3",
+        "vi": "/audio/civics/vi/Q53vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A53en.mp3",
+        "vi": "/audio/civics/vi/A53vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q054",
+    "number": 54,
+    "question": {
+      "en": "How old do citizens have to be to vote for President?",
+      "vi": "Công dân phải bao nhiêu tuổi để bầu Tổng thống?"
+    },
+    "answer": {
+      "en": "18 and older.",
+      "vi": "18 tuổi trở lên."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q54en.mp3",
+        "vi": "/audio/civics/vi/Q54vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A54en.mp3",
+        "vi": "/audio/civics/vi/A54vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q055",
+    "number": 55,
+    "question": {
+      "en": "What are two ways that Americans can participate in their democracy?",
+      "vi": "Hai cách người Mỹ tham gia dân chủ là gì?"
+    },
+    "answer": {
+      "en": "Vote and join a political party.",
+      "vi": "Bầu cử và tham gia đảng chính trị."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q55en.mp3",
+        "vi": "/audio/civics/vi/Q55vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A55en.mp3",
+        "vi": "/audio/civics/vi/A55vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q056",
+    "number": 56,
+    "question": {
+      "en": "When is the last day you can send in federal income tax forms?",
+      "vi": "Ngày cuối cùng gửi mẫu khai thuế liên bang là ngày nào?"
+    },
+    "answer": {
+      "en": "April 15.",
+      "vi": "15 tháng 4."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q56en.mp3",
+        "vi": "/audio/civics/vi/Q56vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A56en.mp3",
+        "vi": "/audio/civics/vi/A56vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q057",
+    "number": 57,
+    "question": {
+      "en": "When must all men register for the Selective Service?",
+      "vi": "Khi nào nam giới phải đăng ký Selective Service?"
+    },
+    "answer": {
+      "en": "At age 18.",
+      "vi": "Khi 18 tuổi."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q57en.mp3",
+        "vi": "/audio/civics/vi/Q57vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A57en.mp3",
+        "vi": "/audio/civics/vi/A57vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q058",
+    "number": 58,
+    "question": {
+      "en": "What is one reason colonists came to America?",
+      "vi": "Một lý do người thuộc địa đến Mỹ là gì?"
+    },
+    "answer": {
+      "en": "Freedom.",
+      "vi": "Tự do."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q58en.mp3",
+        "vi": "/audio/civics/vi/Q58vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A58en.mp3",
+        "vi": "/audio/civics/vi/A58vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q059",
+    "number": 59,
+    "question": {
+      "en": "Who lived in America before the Europeans arrived?",
+      "vi": "Ai sống ở Mỹ trước khi người châu Âu đến?"
+    },
+    "answer": {
+      "en": "Native Americans.",
+      "vi": "Người Mỹ bản địa."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q59en.mp3",
+        "vi": "/audio/civics/vi/Q59vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A59en.mp3",
+        "vi": "/audio/civics/vi/A59vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q060",
+    "number": 60,
+    "question": {
+      "en": "What group of people was taken to America and sold as slaves?",
+      "vi": "Nhóm người nào bị đưa đến Mỹ và bán làm nô lệ?"
+    },
+    "answer": {
+      "en": "Africans.",
+      "vi": "Người châu Phi."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q60en.mp3",
+        "vi": "/audio/civics/vi/Q60vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A60en.mp3",
+        "vi": "/audio/civics/vi/A60vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q061",
+    "number": 61,
+    "question": {
+      "en": "Why did the colonists fight the British?",
+      "vi": "Tại sao người thuộc địa chiến đấu chống Anh?"
+    },
+    "answer": {
+      "en": "Because of high taxes.",
+      "vi": "Vì thuế cao."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q61en.mp3",
+        "vi": "/audio/civics/vi/Q61vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A61en.mp3",
+        "vi": "/audio/civics/vi/A61vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q062",
+    "number": 62,
+    "question": {
+      "en": "Who wrote the Declaration of Independence?",
+      "vi": "Ai viết Tuyên ngôn Độc lập?"
+    },
+    "answer": {
+      "en": "Thomas Jefferson.",
+      "vi": "Thomas Jefferson."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q62en.mp3",
+        "vi": "/audio/civics/vi/Q62vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A62en.mp3",
+        "vi": "/audio/civics/vi/A62vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q063",
+    "number": 63,
+    "question": {
+      "en": "When was the Declaration of Independence adopted?",
+      "vi": "Khi nào Tuyên ngôn Độc lập được thông qua?"
+    },
+    "answer": {
+      "en": "July 4, 1776.",
+      "vi": "Ngày 4 tháng 7 năm 1776."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q63en.mp3",
+        "vi": "/audio/civics/vi/Q63vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A63en.mp3",
+        "vi": "/audio/civics/vi/A63vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q064",
+    "number": 64,
+    "question": {
+      "en": "There were 13 original states. Name three.",
+      "vi": "Có 13 tiểu bang đầu tiên. Kể tên ba."
+    },
+    "answer": {
+      "en": "Virginia; New York; Massachusetts.",
+      "vi": "Virginia; New York; Massachusetts."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q64en.mp3",
+        "vi": "/audio/civics/vi/Q64vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A64en.mp3",
+        "vi": "/audio/civics/vi/A64vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q065",
+    "number": 65,
+    "question": {
+      "en": "What happened at the Constitutional Convention?",
+      "vi": "Điều gì xảy ra tại Hội nghị Hiến pháp?"
+    },
+    "answer": {
+      "en": "The Constitution was written.",
+      "vi": "Hiến pháp được viết."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q65en.mp3",
+        "vi": "/audio/civics/vi/Q65vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A65en.mp3",
+        "vi": "/audio/civics/vi/A65vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q066",
+    "number": 66,
+    "question": {
+      "en": "When was the Constitution written?",
+      "vi": "Hiến pháp được viết khi nào?"
+    },
+    "answer": {
+      "en": "1787.",
+      "vi": "1787."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q66en.mp3",
+        "vi": "/audio/civics/vi/Q66vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A66en.mp3",
+        "vi": "/audio/civics/vi/A66vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q067",
+    "number": 67,
+    "question": {
+      "en": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+      "vi": "Federalist Papers hỗ trợ việc thông qua Hiến pháp. Kể tên một tác giả."
+    },
+    "answer": {
+      "en": "James Madison.",
+      "vi": "James Madison."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q67en.mp3",
+        "vi": "/audio/civics/vi/Q67vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A67en.mp3",
+        "vi": "/audio/civics/vi/A67vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q068",
+    "number": 68,
+    "question": {
+      "en": "What is one thing Benjamin Franklin is famous for?",
+      "vi": "Benjamin Franklin nổi tiếng vì điều gì?"
+    },
+    "answer": {
+      "en": "U.S. diplomat.",
+      "vi": "Nhà ngoại giao Hoa Kỳ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q68en.mp3",
+        "vi": "/audio/civics/vi/Q68vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A68en.mp3",
+        "vi": "/audio/civics/vi/A68vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q069",
+    "number": 69,
+    "question": {
+      "en": "Who is the Father of Our Country?",
+      "vi": "Ai là Cha già của đất nước?"
+    },
+    "answer": {
+      "en": "George Washington.",
+      "vi": "George Washington."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q69en.mp3",
+        "vi": "/audio/civics/vi/Q69vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A69en.mp3",
+        "vi": "/audio/civics/vi/A69vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q070",
+    "number": 70,
+    "question": {
+      "en": "Who was the first President?",
+      "vi": "Ai là Tổng thống đầu tiên?"
+    },
+    "answer": {
+      "en": "George Washington.",
+      "vi": "George Washington."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q70en.mp3",
+        "vi": "/audio/civics/vi/Q70vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A70en.mp3",
+        "vi": "/audio/civics/vi/A70vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q071",
+    "number": 71,
+    "question": {
+      "en": "What territory did the United States buy from France in 1803?",
+      "vi": "Hoa Kỳ mua lãnh thổ nào từ Pháp năm 1803?"
+    },
+    "answer": {
+      "en": "The Louisiana Territory.",
+      "vi": "Lãnh thổ Louisiana."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q71en.mp3",
+        "vi": "/audio/civics/vi/Q71vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A71en.mp3",
+        "vi": "/audio/civics/vi/A71vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q072",
+    "number": 72,
+    "question": {
+      "en": "Name one war fought by the United States in the 1800s.",
+      "vi": "Kể tên một cuộc chiến Hoa Kỳ tham gia trong thế kỷ 1800."
+    },
+    "answer": {
+      "en": "Civil War.",
+      "vi": "Nội chiến."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q72en.mp3",
+        "vi": "/audio/civics/vi/Q72vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A72en.mp3",
+        "vi": "/audio/civics/vi/A72vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q073",
+    "number": 73,
+    "question": {
+      "en": "Name the U.S. war between the North and the South.",
+      "vi": "Cuộc chiến giữa miền Bắc và miền Nam Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "The Civil War.",
+      "vi": "Nội chiến."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q73en.mp3",
+        "vi": "/audio/civics/vi/Q73vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A73en.mp3",
+        "vi": "/audio/civics/vi/A73vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q074",
+    "number": 74,
+    "question": {
+      "en": "Name one problem that led to the Civil War.",
+      "vi": "Một vấn đề dẫn đến Nội chiến là gì?"
+    },
+    "answer": {
+      "en": "Slavery.",
+      "vi": "Chế độ nô lệ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q74en.mp3",
+        "vi": "/audio/civics/vi/Q74vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A74en.mp3",
+        "vi": "/audio/civics/vi/A74vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q075",
+    "number": 75,
+    "question": {
+      "en": "What was one important thing that Abraham Lincoln did?",
+      "vi": "Một điều quan trọng Abraham Lincoln đã làm là gì?"
+    },
+    "answer": {
+      "en": "Freed the slaves.",
+      "vi": "Giải phóng nô lệ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q75en.mp3",
+        "vi": "/audio/civics/vi/Q75vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A75en.mp3",
+        "vi": "/audio/civics/vi/A75vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q076",
+    "number": 76,
+    "question": {
+      "en": "What did the Emancipation Proclamation do?",
+      "vi": "Tuyên ngôn Giải phóng Nô lệ đã làm gì?"
+    },
+    "answer": {
+      "en": "Freed the slaves.",
+      "vi": "Giải phóng nô lệ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q76en.mp3",
+        "vi": "/audio/civics/vi/Q76vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A76en.mp3",
+        "vi": "/audio/civics/vi/A76vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q077",
+    "number": 77,
+    "question": {
+      "en": "What did Susan B. Anthony do?",
+      "vi": "Susan B. Anthony đã làm gì?"
+    },
+    "answer": {
+      "en": "Fought for women’s rights.",
+      "vi": "Đấu tranh cho quyền phụ nữ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q77en.mp3",
+        "vi": "/audio/civics/vi/Q77vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A77en.mp3",
+        "vi": "/audio/civics/vi/A77vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q078",
+    "number": 78,
+    "question": {
+      "en": "Name one war fought by the United States in the 1900s.",
+      "vi": "Kể tên một cuộc chiến Hoa Kỳ tham gia trong thế kỷ 1900."
+    },
+    "answer": {
+      "en": "World War II.",
+      "vi": "Thế chiến thứ hai."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q78en.mp3",
+        "vi": "/audio/civics/vi/Q78vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A78en.mp3",
+        "vi": "/audio/civics/vi/A78vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q079",
+    "number": 79,
+    "question": {
+      "en": "Who was President during World War I?",
+      "vi": "Ai là Tổng thống trong Thế chiến thứ nhất?"
+    },
+    "answer": {
+      "en": "Woodrow Wilson.",
+      "vi": "Woodrow Wilson."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q79en.mp3",
+        "vi": "/audio/civics/vi/Q79vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A79en.mp3",
+        "vi": "/audio/civics/vi/A79vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q080",
+    "number": 80,
+    "question": {
+      "en": "Who was President during the Great Depression and World War II?",
+      "vi": "Ai là Tổng thống trong Đại khủng hoảng và Thế chiến thứ hai?"
+    },
+    "answer": {
+      "en": "Franklin Roosevelt.",
+      "vi": "Franklin Roosevelt."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q80en.mp3",
+        "vi": "/audio/civics/vi/Q80vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A80en.mp3",
+        "vi": "/audio/civics/vi/A80vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q081",
+    "number": 81,
+    "question": {
+      "en": "Who did the United States fight in World War II?",
+      "vi": "Hoa Kỳ chiến đấu với ai trong Thế chiến thứ hai?"
+    },
+    "answer": {
+      "en": "Japan, Germany, and Italy.",
+      "vi": "Nhật Bản, Đức và Ý."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q81en.mp3",
+        "vi": "/audio/civics/vi/Q81vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A81en.mp3",
+        "vi": "/audio/civics/vi/A81vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q082",
+    "number": 82,
+    "question": {
+      "en": "Before he was President, Eisenhower was a general. What war was he in?",
+      "vi": "Trước khi làm Tổng thống, Eisenhower là tướng trong cuộc chiến nào?"
+    },
+    "answer": {
+      "en": "World War II.",
+      "vi": "Thế chiến thứ hai."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q82en.mp3",
+        "vi": "/audio/civics/vi/Q82vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A82en.mp3",
+        "vi": "/audio/civics/vi/A82vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q083",
+    "number": 83,
+    "question": {
+      "en": "During the Cold War, what was the main concern of the United States?",
+      "vi": "Trong Chiến tranh Lạnh, mối lo chính của Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Communism.",
+      "vi": "Chủ nghĩa cộng sản."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q83en.mp3",
+        "vi": "/audio/civics/vi/Q83vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A83en.mp3",
+        "vi": "/audio/civics/vi/A83vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q084",
+    "number": 84,
+    "question": {
+      "en": "What movement tried to end racial discrimination?",
+      "vi": "Phong trào nào cố gắng chấm dứt phân biệt chủng tộc?"
+    },
+    "answer": {
+      "en": "Civil Rights Movement.",
+      "vi": "Phong trào Dân quyền."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q84en.mp3",
+        "vi": "/audio/civics/vi/Q84vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A84en.mp3",
+        "vi": "/audio/civics/vi/A84vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q085",
+    "number": 85,
+    "question": {
+      "en": "What did Martin Luther King, Jr. do?",
+      "vi": "Martin Luther King Jr. đã làm gì?"
+    },
+    "answer": {
+      "en": "Fought for civil rights.",
+      "vi": "Đấu tranh cho dân quyền."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q85en.mp3",
+        "vi": "/audio/civics/vi/Q85vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A85en.mp3",
+        "vi": "/audio/civics/vi/A85vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q086",
+    "number": 86,
+    "question": {
+      "en": "What major event happened on September 11, 2001, in the United States?",
+      "vi": "Sự kiện lớn nào xảy ra ngày 11 tháng 9 năm 2001?"
+    },
+    "answer": {
+      "en": "Terrorists attacked the United States.",
+      "vi": "Khủng bố tấn công Hoa Kỳ."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q86en.mp3",
+        "vi": "/audio/civics/vi/Q86vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A86en.mp3",
+        "vi": "/audio/civics/vi/A86vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q087",
+    "number": 87,
+    "question": {
+      "en": "Name one American Indian tribe in the United States.",
+      "vi": "Kể tên một bộ tộc người Mỹ bản địa."
+    },
+    "answer": {
+      "en": "Cherokee.",
+      "vi": "Cherokee."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q87en.mp3",
+        "vi": "/audio/civics/vi/Q87vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A87en.mp3",
+        "vi": "/audio/civics/vi/A87vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q088",
+    "number": 88,
+    "question": {
+      "en": "Name one of the two longest rivers in the United States.",
+      "vi": "Kể tên một trong hai con sông dài nhất ở Hoa Kỳ."
+    },
+    "answer": {
+      "en": "Mississippi River.",
+      "vi": "Sông Mississippi."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q88en.mp3",
+        "vi": "/audio/civics/vi/Q88vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A88en.mp3",
+        "vi": "/audio/civics/vi/A88vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q089",
+    "number": 89,
+    "question": {
+      "en": "What ocean is on the West Coast of the United States?",
+      "vi": "Đại dương nào ở bờ Tây Hoa Kỳ?"
+    },
+    "answer": {
+      "en": "Pacific Ocean.",
+      "vi": "Thái Bình Dương."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q89en.mp3",
+        "vi": "/audio/civics/vi/Q89vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A89en.mp3",
+        "vi": "/audio/civics/vi/A89vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q090",
+    "number": 90,
+    "question": {
+      "en": "What ocean is on the East Coast of the United States?",
+      "vi": "Đại dương nào ở bờ Đông Hoa Kỳ?"
+    },
+    "answer": {
+      "en": "Atlantic Ocean.",
+      "vi": "Đại Tây Dương."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q90en.mp3",
+        "vi": "/audio/civics/vi/Q90vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A90en.mp3",
+        "vi": "/audio/civics/vi/A90vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q091",
+    "number": 91,
+    "question": {
+      "en": "Name one U.S. territory.",
+      "vi": "Kể tên một lãnh thổ Hoa Kỳ."
+    },
+    "answer": {
+      "en": "Puerto Rico.",
+      "vi": "Puerto Rico."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q91en.mp3",
+        "vi": "/audio/civics/vi/Q91vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A91en.mp3",
+        "vi": "/audio/civics/vi/A91vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q092",
+    "number": 92,
+    "question": {
+      "en": "Name one state that borders Canada.",
+      "vi": "Kể tên một tiểu bang giáp Canada."
+    },
+    "answer": {
+      "en": "Washington.",
+      "vi": "Washington."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q92en.mp3",
+        "vi": "/audio/civics/vi/Q92vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A92en.mp3",
+        "vi": "/audio/civics/vi/A92vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q093",
+    "number": 93,
+    "question": {
+      "en": "Name one state that borders Mexico.",
+      "vi": "Kể tên một tiểu bang giáp Mexico."
+    },
+    "answer": {
+      "en": "Texas.",
+      "vi": "Texas."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q93en.mp3",
+        "vi": "/audio/civics/vi/Q93vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A93en.mp3",
+        "vi": "/audio/civics/vi/A93vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q094",
+    "number": 94,
+    "question": {
+      "en": "What is the capital of the United States?",
+      "vi": "Thủ đô của Hoa Kỳ là gì?"
+    },
+    "answer": {
+      "en": "Washington, D.C.",
+      "vi": "Washington, D.C."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q94en.mp3",
+        "vi": "/audio/civics/vi/Q94vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A94en.mp3",
+        "vi": "/audio/civics/vi/A94vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q095",
+    "number": 95,
+    "question": {
+      "en": "Where is the Statue of Liberty?",
+      "vi": "Tượng Nữ thần Tự do ở đâu?"
+    },
+    "answer": {
+      "en": "New York Harbor.",
+      "vi": "Cảng New York."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q95en.mp3",
+        "vi": "/audio/civics/vi/Q95vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A95en.mp3",
+        "vi": "/audio/civics/vi/A95vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q096",
+    "number": 96,
+    "question": {
+      "en": "Why does the flag have 13 stripes?",
+      "vi": "Tại sao lá cờ có 13 sọc?"
+    },
+    "answer": {
+      "en": "Because there were 13 original colonies.",
+      "vi": "Vì có 13 thuộc địa đầu tiên."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q96en.mp3",
+        "vi": "/audio/civics/vi/Q96vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A96en.mp3",
+        "vi": "/audio/civics/vi/A96vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q097",
+    "number": 97,
+    "question": {
+      "en": "Why does the flag have 50 stars?",
+      "vi": "Tại sao lá cờ có 50 ngôi sao?"
+    },
+    "answer": {
+      "en": "Because there are 50 states.",
+      "vi": "Vì có 50 tiểu bang."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q97en.mp3",
+        "vi": "/audio/civics/vi/Q97vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A97en.mp3",
+        "vi": "/audio/civics/vi/A97vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q098",
+    "number": 98,
+    "question": {
+      "en": "What is the name of the national anthem?",
+      "vi": "Quốc ca Hoa Kỳ tên là gì?"
+    },
+    "answer": {
+      "en": "The Star-Spangled Banner.",
+      "vi": "The Star-Spangled Banner."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q98en.mp3",
+        "vi": "/audio/civics/vi/Q98vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A98en.mp3",
+        "vi": "/audio/civics/vi/A98vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q099",
+    "number": 99,
+    "question": {
+      "en": "When do we celebrate Independence Day?",
+      "vi": "Khi nào chúng ta kỷ niệm Ngày Độc lập?"
+    },
+    "answer": {
+      "en": "July 4.",
+      "vi": "Ngày 4 tháng 7."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q99en.mp3",
+        "vi": "/audio/civics/vi/Q99vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A99en.mp3",
+        "vi": "/audio/civics/vi/A99vn.mp3"
+      }
+    }
+  },
+  {
+    "id": "q100",
+    "number": 100,
+    "question": {
+      "en": "Name two national U.S. holidays.",
+      "vi": "Kể tên hai ngày lễ quốc gia của Hoa Kỳ."
+    },
+    "answer": {
+      "en": "Thanksgiving and Independence Day.",
+      "vi": "Lễ Tạ ơn và Ngày Độc lập."
+    },
+    "audio": {
+      "question": {
+        "en": "/audio/civics/en/Q100en.mp3",
+        "vi": "/audio/civics/vi/Q100vn.mp3"
+      },
+      "answer": {
+        "en": "/audio/civics/en/A100en.mp3",
+        "vi": "/audio/civics/vi/A100vn.mp3"
+      }
+    }
+  }
+]

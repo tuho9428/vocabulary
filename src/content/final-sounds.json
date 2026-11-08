@@ -1,0 +1,27 @@
+{
+  "question-words-what": {
+    "finalSound": "t",
+    "headword": "what",
+    "source": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict#L130910"
+  },
+  "basic-test-verbs-decide": {
+    "finalSound": "d",
+    "headword": "decide",
+    "source": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict#L29381"
+  },
+  "voting-citizenship-citizen": {
+    "finalSound": "n",
+    "headword": "citizen",
+    "source": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict#L21872"
+  },
+  "congress-congress": {
+    "finalSound": "s",
+    "headword": "congress",
+    "source": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict#L24433"
+  },
+  "voting-citizenship-taxes": {
+    "finalSound": "z",
+    "headword": "taxes",
+    "source": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict#L119906"
+  }
+}

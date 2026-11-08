@@ -1,0 +1,209 @@
+{
+  "words": {},
+  "questions": [
+    {
+      "question": "What is the supreme law of the land?",
+      "questionAudio": "/audio/civics/en/Q1en.mp3",
+      "answer": "The Constitution.",
+      "answerAudio": "/audio/civics/en/A1en.mp3"
+    },
+    {
+      "question": "What does the Constitution do?",
+      "questionAudio": "/audio/civics/en/Q2en.mp3",
+      "answer": "Sets up the government; defines the government; protects basic rights of Americans.",
+      "answerAudio": "/audio/civics/en/A2en.mp3"
+    },
+    {
+      "question": "The idea of self-government is in the first three words of the Constitution. What are these words?",
+      "questionAudio": "/audio/civics/en/Q3en.mp3",
+      "answer": "We the People.",
+      "answerAudio": "/audio/civics/en/A3en.mp3"
+    },
+    {
+      "question": "What is an amendment?",
+      "questionAudio": "/audio/civics/en/Q4en.mp3",
+      "answer": "A change to the Constitution.",
+      "answerAudio": "/audio/civics/en/A4en.mp3"
+    },
+    {
+      "question": "What do we call the first ten amendments to the Constitution?",
+      "questionAudio": "/audio/civics/en/Q5en.mp3",
+      "answer": "The Bill of Rights.",
+      "answerAudio": "/audio/civics/en/A5en.mp3"
+    },
+    {
+      "question": "What is one right or freedom from the First Amendment?",
+      "questionAudio": "/audio/civics/en/Q6en.mp3",
+      "answer": "Speech; religion; assembly; press; petition the government.",
+      "answerAudio": "/audio/civics/en/A6en.mp3"
+    },
+    {
+      "question": "How many amendments does the Constitution have?",
+      "questionAudio": "/audio/civics/en/Q7en.mp3",
+      "answer": "27.",
+      "answerAudio": "/audio/civics/en/A7en.mp3"
+    },
+    {
+      "question": "What did the Declaration of Independence do?",
+      "questionAudio": "/audio/civics/en/Q8en.mp3",
+      "answer": "Announced independence from Great Britain.",
+      "answerAudio": "/audio/civics/en/A8en.mp3"
+    },
+    {
+      "question": "What are two rights in the Declaration of Independence?",
+      "questionAudio": "/audio/civics/en/Q9en.mp3",
+      "answer": "Life and liberty.",
+      "answerAudio": "/audio/civics/en/A9en.mp3"
+    },
+    {
+      "question": "What is freedom of religion?",
+      "questionAudio": "/audio/civics/en/Q10en.mp3",
+      "answer": "You can practice any religion, or not practice a religion.",
+      "answerAudio": "/audio/civics/en/A10en.mp3"
+    },
+    {
+      "question": "What is the economic system in the United States?",
+      "questionAudio": "/audio/civics/en/Q11en.mp3",
+      "answer": "Capitalist economy; market economy.",
+      "answerAudio": "/audio/civics/en/A11en.mp3"
+    },
+    {
+      "question": "What is the rule of law?",
+      "questionAudio": "/audio/civics/en/Q12en.mp3",
+      "answer": "Everyone must follow the law.",
+      "answerAudio": "/audio/civics/en/A12en.mp3"
+    },
+    {
+      "question": "Name one branch or part of the government.",
+      "questionAudio": "/audio/civics/en/Q13en.mp3",
+      "answer": "Congress; legislative; President; executive; courts; judicial.",
+      "answerAudio": "/audio/civics/en/A13en.mp3"
+    },
+    {
+      "question": "What stops one branch of government from becoming too powerful?",
+      "questionAudio": "/audio/civics/en/Q14en.mp3",
+      "answer": "Checks and balances; separation of powers.",
+      "answerAudio": "/audio/civics/en/A14en.mp3"
+    },
+    {
+      "question": "Who is in charge of the executive branch?",
+      "questionAudio": "/audio/civics/en/Q15en.mp3",
+      "answer": "The President.",
+      "answerAudio": "/audio/civics/en/A15en.mp3"
+    },
+    {
+      "question": "Who makes federal laws?",
+      "questionAudio": "/audio/civics/en/Q16en.mp3",
+      "answer": "Congress.",
+      "answerAudio": "/audio/civics/en/A16en.mp3"
+    },
+    {
+      "question": "What are the two parts of the U.S. Congress?",
+      "questionAudio": "/audio/civics/en/Q17en.mp3",
+      "answer": "The Senate and House of Representatives.",
+      "answerAudio": "/audio/civics/en/A17en.mp3"
+    },
+    {
+      "question": "How many U.S. Senators are there?",
+      "questionAudio": "/audio/civics/en/Q18en.mp3",
+      "answer": "100.",
+      "answerAudio": "/audio/civics/en/A18en.mp3"
+    },
+    {
+      "question": "We elect a U.S. Senator for how many years?",
+      "questionAudio": "/audio/civics/en/Q19en.mp3",
+      "answer": "Six.",
+      "answerAudio": "/audio/civics/en/A19en.mp3"
+    },
+    {
+      "question": "Who is one of your state’s U.S. Senators now?",
+      "questionAudio": "/audio/civics/en/Q20en.mp3",
+      "answer": "Patty Murray (Answers vary by state/year.)",
+      "answerAudio": "/audio/civics/en/A20en.mp3"
+    },
+    {
+      "question": "The House of Representatives has how many voting members?",
+      "questionAudio": "/audio/civics/en/Q21en.mp3",
+      "answer": "435.",
+      "answerAudio": "/audio/civics/en/A21en.mp3"
+    },
+    {
+      "question": "We elect a U.S. Representative for how many years?",
+      "questionAudio": "/audio/civics/en/Q22en.mp3",
+      "answer": "Two.",
+      "answerAudio": "/audio/civics/en/A22en.mp3"
+    },
+    {
+      "question": "Name your U.S. Representative.",
+      "questionAudio": "/audio/civics/en/Q23en.mp3",
+      "answer": "Adam Smith (Answers vary by district/year.)",
+      "answerAudio": "/audio/civics/en/A23en.mp3"
+    },
+    {
+      "question": "Who does a U.S. Senator represent?",
+      "questionAudio": "/audio/civics/en/Q24en.mp3",
+      "answer": "All people of the state.",
+      "answerAudio": "/audio/civics/en/A24en.mp3"
+    },
+    {
+      "question": "Why do some states have more Representatives than other states?",
+      "questionAudio": "/audio/civics/en/Q25en.mp3",
+      "answer": "Because of the state's population.",
+      "answerAudio": "/audio/civics/en/A25en.mp3"
+    },
+    {
+      "question": "We elect a President for how many years?",
+      "questionAudio": "/audio/civics/en/Q26en.mp3",
+      "answer": "Four.",
+      "answerAudio": "/audio/civics/en/A26en.mp3"
+    },
+    {
+      "question": "In what month do we vote for President?",
+      "questionAudio": "/audio/civics/en/Q27en.mp3",
+      "answer": "November.",
+      "answerAudio": "/audio/civics/en/A27en.mp3"
+    },
+    {
+      "question": "What is the name of the President of the United States now?",
+      "questionAudio": "/audio/civics/en/Q28en.mp3",
+      "answer": "Donald Trump (Depends on current year.)",
+      "answerAudio": "/audio/civics/en/A28en.mp3"
+    },
+    {
+      "question": "What is the name of the Vice President of the United States now?",
+      "questionAudio": "/audio/civics/en/Q29en.mp3",
+      "answer": "JD Vance (Depends on current year.)",
+      "answerAudio": "/audio/civics/en/A29en.mp3"
+    },
+    {
+      "question": "If the President can no longer serve, who becomes President?",
+      "questionAudio": "/audio/civics/en/Q30en.mp3",
+      "answer": "The Vice President.",
+      "answerAudio": "/audio/civics/en/A30en.mp3"
+    },
+    {
+      "question": "If both the President and the Vice President can no longer serve, who becomes President?",
+      "questionAudio": "/audio/civics/en/Q31en.mp3",
+      "answer": "The Speaker of the House.",
+      "answerAudio": "/audio/civics/en/A31en.mp3"
+    },
+    {
+      "question": "Who is the Commander in Chief of the military?",
+      "questionAudio": "/audio/civics/en/Q32en.mp3",
+      "answer": "The President.",
+      "answerAudio": "/audio/civics/en/A32en.mp3"
+    },
+    {
+      "question": "Who signs bills to become laws?",
+      "questionAudio": "/audio/civics/en/Q33en.mp3",
+      "answer": "The President.",
+      "answerAudio": "/audio/civics/en/A33en.mp3"
+    },
+    {
+      "question": "Who vetoes bills?",
+      "questionAudio": "/audio/civics/en/Q34en.mp3",
+      "answer": "The President.",
+      "answerAudio": "/audio/civics/en/A34en.mp3"
+    }
+  ]
+}
