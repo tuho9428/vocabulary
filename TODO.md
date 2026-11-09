@@ -1,5 +1,12 @@
 # Implementation progress
 
+## English audio for citizenship answers
+
+- [x] Add **Nghe đáp án** after reveal and a separate, labelled 56px playback control for each accepted alternative. Use the exact official English text and keep any Vietnamese translation visible.
+- [x] Reuse en-US speech, replay/cancellation, and unavailable-audio handling; clear playback feedback when audio ends or the learner advances. Preserve question playback, answer content, IDs, progress, and schedules.
+- [x] Verify every static answer control in regression tests and check reveal, individual playback, no-alternative layout, rapid taps, recording/speech cancellation, unavailable speech, and 320px layout in Chrome.
+- [x] Pass 111 tests, lint, TypeScript, data validation, and production build.
+
 ## Full user journey audit — November 8, 2026
 
 - [x] Read the current implementation/data reports; audit first use, same-day return, next-day return, interruption, every review route, citizenship practice, and edge cases in Chrome.

@@ -4,6 +4,7 @@ export function speakEnglish(
   text: string,
   rate: number,
   onError: () => void,
+  onEnd?: () => void,
 ): void {
   if (
     !("speechSynthesis" in window) ||
@@ -25,6 +26,7 @@ export function speakEnglish(
     if (voice) utterance.voice = voice;
     utterance.lang = "en-US";
     utterance.rate = rate;
+    utterance.onend = () => onEnd?.();
     utterance.onerror = (event) => {
       if (event.error !== "canceled" && event.error !== "interrupted")
         onError();

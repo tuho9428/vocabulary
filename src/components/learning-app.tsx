@@ -162,6 +162,7 @@ export function LearningApp() {
         setAudioNotice(
           "Chưa phát được bản thu. Đang dùng giọng đọc của trình duyệt.",
         ),
+      (playing) => setAudioNotice(playing ? `Đang đọc tiếng Anh: ${text}` : ""),
     );
   }
 

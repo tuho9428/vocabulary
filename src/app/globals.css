@@ -77,7 +77,16 @@
 .accepted-answers { margin: 12px 0; text-align: left; }
 .accepted-answers > summary { min-height: 56px; padding: 14px 12px; cursor: pointer; border-radius: 8px; font-size: 20px; color: #245541; }
 .accepted-answers ul { padding-left: 24px; font-size: 24px; line-height: 1.5; overflow-wrap: anywhere; }
-.accepted-answers li { margin: 12px 0; }
+.accepted-answers li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+.accepted-answers li > .audio-button { min-width: 56px; padding-inline: 10px; }
+.accepted-answers li > p { grid-column: 1 / -1; }
+.answer-area > .audio-button { width: 100%; margin: 12px 0; }
 .practice-card .answer-area .answer-label { font-size: 18px; font-weight: 700; color: #245541; margin: 0 0 12px; }
 .dynamic-question-list { padding-left: 24px; font-size: 19px; overflow-wrap: anywhere; }
 .dynamic-question-list li { margin: 12px 0; }

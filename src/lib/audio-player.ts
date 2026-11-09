@@ -8,7 +8,7 @@ export type AudioHandle = {
 };
 type Dependencies = {
   createAudio: (src: string) => AudioHandle;
-  speak: (text: string, rate: number, onError: () => void) => void;
+  speak: (text: string, rate: number, onError: () => void, onEnd?: () => void) => void;
   cancelSpeech: () => void;
 };
 
@@ -17,6 +17,7 @@ export function createAudioPlayer(dependencies: Dependencies) {
   let generation = 0;
   let current: AudioHandle | undefined;
   let cleanup: (() => void) | undefined;
+  let reportStopped: (() => void) | undefined;
   function clearRecording() {
     cleanup?.();
     cleanup = undefined;
@@ -31,6 +32,8 @@ export function createAudioPlayer(dependencies: Dependencies) {
     }
   }
   function stop() {
+    reportStopped?.();
+    reportStopped = undefined;
     generation++;
     clearRecording();
     dependencies.cancelSpeech();
@@ -41,13 +44,23 @@ export function createAudioPlayer(dependencies: Dependencies) {
     onError: () => void,
     src?: string,
     onFallback?: () => void,
+    onStatus?: (playing: boolean) => void,
   ) {
     stop();
     const request = generation;
+    const endedStatus = () => {
+      if (request !== generation) return;
+      reportStopped = undefined;
+      onStatus?.(false);
+    };
+    reportStopped = endedStatus;
+    onStatus?.(true);
     const speak = () =>
       dependencies.speak(text, rate, () => {
-        if (request === generation) onError();
-      });
+        if (request !== generation) return;
+        endedStatus();
+        onError();
+      }, endedStatus);
     if (!src) {
       speak();
       return;
@@ -65,7 +78,9 @@ export function createAudioPlayer(dependencies: Dependencies) {
       current = audio;
       audio.playbackRate = rate;
       const ended = () => {
-        if (request === generation) clearRecording();
+        if (request !== generation) return;
+        clearRecording();
+        endedStatus();
       };
       audio.addEventListener("error", fallback);
       audio.addEventListener("ended", ended);

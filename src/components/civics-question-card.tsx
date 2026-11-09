@@ -7,16 +7,19 @@ function AudioButton({
   recording,
   label,
   onPlay,
+  accessibleLabel,
 }: {
   text: string;
   recording?: string;
   label: string;
   onPlay: (text: string, recording?: string) => void;
+  accessibleLabel?: string;
 }) {
   return (
     <button
       type="button"
       className="audio-button"
+      aria-label={accessibleLabel}
       onClick={() => onPlay(text, recording)}
     >
       <span aria-hidden="true" className="speaker">
@@ -77,7 +80,7 @@ export function CivicsQuestionCard({
         <div className="answer-area" aria-live="polite">
           {usable ? (
             <>
-              <p className="answer-label">ĐÁP ÁN</p>
+              <p className="answer-label">ĐÁP ÁN CHÍNH</p>
               {recommended.map((answer, index) => (
                 <h2 lang="en" key={index}>
                   {answer}
@@ -88,14 +91,28 @@ export function CivicsQuestionCard({
                   {translation}
                 </p>
               ))}
+              <AudioButton
+                text={recommended.join(" ")}
+                label="Nghe đáp án"
+                onPlay={onPlay}
+              />
               {alternatives.length > 0 && (
                 <details className="accepted-answers">
                   <summary>Các đáp án khác</summary>
-                  <ul lang="en">
+                  <ul>
                     {alternatives.map((answer, index) => (
-                      <li key={index}>{answer}{item.answersVietnamese?.[index + count] && (
-                        <p lang="vi">{item.answersVietnamese[index + count]}</p>
-                      )}</li>
+                      <li key={index}>
+                        <span lang="en">{answer}</span>
+                        <AudioButton
+                          text={answer}
+                          label="Nghe"
+                          accessibleLabel={`Nghe: ${answer}`}
+                          onPlay={onPlay}
+                        />
+                        {item.answersVietnamese?.[index + count] && (
+                          <p lang="vi">{item.answersVietnamese[index + count]}</p>
+                        )}
+                      </li>
                     ))}
                   </ul>
                 </details>
